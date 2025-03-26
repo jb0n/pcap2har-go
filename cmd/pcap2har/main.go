@@ -6,9 +6,9 @@ import (
 
 	jsoniter "github.com/json-iterator/go"
 
-	"github.com/colinnewell/pcap-cli/cli"
-	"github.com/colinnewell/pcap2har-go/internal/har"
-	"github.com/colinnewell/pcap2har-go/internal/reader"
+	"github.com/jb0n/pcap2har-go/internal/har"
+	"github.com/jb0n/pcap2har-go/internal/reader"
+	"github.com/jb0n/pcap2har-go/pcap-cli/cli"
 )
 
 func main() {

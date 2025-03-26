@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/colinnewell/pcap2har-go/internal/reader"
+	"github.com/jb0n/pcap2har-go/internal/reader"
 )
 
 // Creator app that constructed the har output.

@@ -1,5 +1,9 @@
 # pcap2har-go
 
+## Fork
+This is a fork of colinnewell/pcap2har-go to update goquery, and add his pcap-cli so we can alter this repo to be used
+as a lib.
+
 ## Overview
 
 This is a program designed to take a packet capture and produce a HAR (json)
@@ -24,7 +28,7 @@ Note that it's assumed you have Go installed, and also make (without make look
 at the commands in the Makefile, that is mostly being used for convenience
 rather than because things are particularly complex).
 
-	git clone https://github.com/colinnewell/pcap2har-go.git
+	git clone https://github.com/jb0n/pcap2har-go.git
 	cd pcap2har-go
 	make
 	sudo make install

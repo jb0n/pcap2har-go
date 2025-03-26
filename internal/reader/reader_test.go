@@ -8,10 +8,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/colinnewell/pcap2har-go/internal/reader"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"github.com/google/gopacket"
+	"github.com/gopacket/gopacket"
+	"github.com/jb0n/pcap2har-go/internal/reader"
 )
 
 // need a fake reader to emulate getting requests in dribs and drabs as we

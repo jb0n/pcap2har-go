@@ -10,9 +10,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/colinnewell/pcap-cli/tcp"
-	"github.com/google/gopacket"
-	"github.com/google/gopacket/tcpassembly/tcpreader"
+	"github.com/gopacket/gopacket"
+	"github.com/gopacket/gopacket/tcpassembly/tcpreader"
+	"github.com/jb0n/pcap2har-go/pcap-cli/tcp"
 )
 
 type HTTPConversationReaders struct {

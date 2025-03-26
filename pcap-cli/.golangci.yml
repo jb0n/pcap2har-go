@@ -3,36 +3,37 @@ linters:
   enable:
     - asciicheck
     - bodyclose
+    - unused
     - dogsled
     - dupl
     - errcheck
-      #- funlen
-      #- gochecknoglobals
+    - funlen
+    - gochecknoglobals
     - gochecknoinits
-      #- gocognit
+    - gocognit
     - goconst
     - gocritic
-      #- gocyclo
+    - gocyclo
     - godot
-      #- goerr113
+    - goerr113
     - gofmt
     - goimports
-      #- golint
-      #- gomnd
+    - revive
+    - gomnd
     - goprintffuncname
     - gosec
     - gosimple
     - govet
     - ineffassign
-      #- lll
+    - lll
     - misspell
     - nakedret
-      #- nestif
+    - nestif
     - nolintlint
     - rowserrcheck
     - exportloopref
     - staticcheck
-      #- stylecheck
+    - stylecheck
     - testpackage
     - typecheck
     - unconvert

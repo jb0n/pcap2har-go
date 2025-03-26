@@ -9,10 +9,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/colinnewell/pcap2har-go/internal/har"
-	"github.com/colinnewell/pcap2har-go/internal/reader"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/gopacket"
+	"github.com/gopacket/gopacket"
+	"github.com/jb0n/pcap2har-go/internal/har"
+	"github.com/jb0n/pcap2har-go/internal/reader"
 )
 
 func TestEmptyHarOutput(t *testing.T) {

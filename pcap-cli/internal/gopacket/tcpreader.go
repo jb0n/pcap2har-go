@@ -1,4 +1,8 @@
-package reader
+// Copyright (c) 2012 Google, Inc. All rights reserved.
+// Copyright (c) 2009-2011 Andreas Krennmair. All rights reserved.
+// clone of gopacket/tcpassembly/tcpreader/reader.go that allows timing info to be extracted
+
+package gopacket
 
 import (
 	"errors"
@@ -7,8 +11,6 @@ import (
 
 	"github.com/gopacket/gopacket/tcpassembly"
 )
-
-// clone of gopacket/tcpassembly/tcpreader/reader.go that allows timing info to be extracted
 
 // TCPReaderStream implements both tcpassembly.Stream and io.Reader.  You can use it
 // as a building block to make simple, easy stream handlers.
@@ -86,9 +88,9 @@ func (r *TCPReaderStream) stripEmpty() {
 	}
 }
 
-// DataLost is returned by the TCPReaderStream's Read function when it encounters
+// ErrDataLost is returned by the TCPReaderStream's Read function when it encounters
 // a Reassembly with Skip != 0.
-var DataLost = errors.New("lost data")
+var ErrDataLost = errors.New("lost data")
 
 // Read implements io.Reader's Read function.
 // Given a byte slice, it will either copy a non-zero number of bytes into
@@ -116,7 +118,7 @@ func (r *TCPReaderStream) Read(p []byte) (int, error) {
 		current := &r.current[0]
 		if r.LossErrors && !r.lossReported && current.Skip != 0 {
 			r.lossReported = true
-			return 0, DataLost
+			return 0, ErrDataLost
 		}
 		length := copy(p, current.Bytes)
 		current.Bytes = current.Bytes[length:]

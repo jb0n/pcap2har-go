@@ -8,13 +8,13 @@ import (
 	"log"
 	"os"
 
-	"github.com/colinnewell/pcap-cli/tcp"
-	"github.com/colinnewell/pcap2har-go/internal/reader"
+	"github.com/jb0n/pcap2har-go/internal/reader"
+	"github.com/jb0n/pcap2har-go/pcap-cli/tcp"
 
-	"github.com/google/gopacket"
-	"github.com/google/gopacket/layers"
-	"github.com/google/gopacket/pcap"
-	"github.com/google/gopacket/tcpassembly"
+	"github.com/gopacket/gopacket"
+	"github.com/gopacket/gopacket/layers"
+	"github.com/gopacket/gopacket/pcap"
+	"github.com/gopacket/gopacket/tcpassembly"
 )
 
 func Fuzz(data []byte) int {

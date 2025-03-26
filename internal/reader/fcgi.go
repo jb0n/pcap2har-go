@@ -4,10 +4,10 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/google/gopacket"
+	"github.com/gopacket/gopacket"
 
-	"github.com/colinnewell/pcap-cli/tcp"
-	"github.com/colinnewell/pcap2har-go/internal/go/fcgi"
+	"github.com/jb0n/pcap2har-go/internal/go/fcgi"
+	"github.com/jb0n/pcap2har-go/pcap-cli/tcp"
 )
 
 type FCGIInfoGatherer struct {
