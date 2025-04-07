@@ -101,8 +101,7 @@ func Convert(files []string) ([]byte, error) {
 
 	assembler.FlushAll()
 	buf := &bytes.Buffer{}
-	rdr := reader.New()
-	streamFactory.Output(buf, convertOutputFunc(rdr))
+	streamFactory.Output(buf, convertOutputFunc(r))
 	return buf.Bytes(), nil
 }
 
