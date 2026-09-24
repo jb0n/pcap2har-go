@@ -1,0 +1,843 @@
+{
+  "log": {
+    "version": "1.2",
+    "creator": {
+      "name": "pcap2har",
+      "version": "63c5006"
+    },
+    "pages": [
+      {
+        "startedDateTime": "2026-09-24T14:08:17.677364-07:00",
+        "id": "page_1",
+        "title": "https://127.0.0.1:8443/tls13/login",
+        "pageTimings": {
+          "onContentLoad": -1,
+          "onLoad": -1
+        }
+      },
+      {
+        "startedDateTime": "2026-09-24T14:08:17.681041-07:00",
+        "id": "page_2",
+        "title": "https://127.0.0.1:8443/tls13/config",
+        "pageTimings": {
+          "onContentLoad": -1,
+          "onLoad": -1
+        }
+      },
+      {
+        "startedDateTime": "2026-09-24T14:08:17.684339-07:00",
+        "id": "page_3",
+        "title": "https://127.0.0.1:8443/tls12-gcm/login",
+        "pageTimings": {
+          "onContentLoad": -1,
+          "onLoad": -1
+        }
+      },
+      {
+        "startedDateTime": "2026-09-24T14:08:17.684954-07:00",
+        "id": "page_4",
+        "title": "https://127.0.0.1:8443/tls12-gcm/config",
+        "pageTimings": {
+          "onContentLoad": -1,
+          "onLoad": -1
+        }
+      },
+      {
+        "startedDateTime": "2026-09-24T14:08:17.686984-07:00",
+        "id": "page_5",
+        "title": "https://127.0.0.1:8443/tls12-cbc-etm/login",
+        "pageTimings": {
+          "onContentLoad": -1,
+          "onLoad": -1
+        }
+      },
+      {
+        "startedDateTime": "2026-09-24T14:08:17.687426-07:00",
+        "id": "page_6",
+        "title": "https://127.0.0.1:8443/tls12-cbc-etm/config",
+        "pageTimings": {
+          "onContentLoad": -1,
+          "onLoad": -1
+        }
+      },
+      {
+        "startedDateTime": "2026-09-24T14:08:17.689343-07:00",
+        "id": "page_7",
+        "title": "https://127.0.0.1:8443/tls12-chacha/login",
+        "pageTimings": {
+          "onContentLoad": -1,
+          "onLoad": -1
+        }
+      },
+      {
+        "startedDateTime": "2026-09-24T14:08:17.689768-07:00",
+        "id": "page_8",
+        "title": "https://127.0.0.1:8443/tls12-chacha/config",
+        "pageTimings": {
+          "onContentLoad": -1,
+          "onLoad": -1
+        }
+      },
+      {
+        "startedDateTime": "2026-09-24T14:08:17.691462-07:00",
+        "id": "page_9",
+        "title": "https://127.0.0.1:8443/tls10-cbc/login",
+        "pageTimings": {
+          "onContentLoad": -1,
+          "onLoad": -1
+        }
+      },
+      {
+        "startedDateTime": "2026-09-24T14:08:17.692253-07:00",
+        "id": "page_10",
+        "title": "https://127.0.0.1:8443/tls10-cbc/config",
+        "pageTimings": {
+          "onContentLoad": -1,
+          "onLoad": -1
+        }
+      }
+    ],
+    "entries": [
+      {
+        "startedDateTime": "2026-09-24T14:08:17.677364-07:00",
+        "time": 1757000,
+        "request": {
+          "method": "GET",
+          "url": "https://127.0.0.1:8443/tls13/login",
+          "httpVersion": "",
+          "headers": [
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Host",
+              "value": "127.0.0.1:8443"
+            }
+          ],
+          "queryString": null,
+          "cookies": [],
+          "headersSize": 0,
+          "bodySize": 0,
+          "postData": {
+            "mimeType": "",
+            "size": 0,
+            "text": ""
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "200 OK",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Date",
+              "value": "Thu, 24 Sep 2026 21:08:17 GMT"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Keep-Alive",
+              "value": "timeout=5"
+            },
+            {
+              "name": "Content-Length",
+              "value": "22"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "mimeType": "",
+            "size": 22,
+            "text": "reply to /tls13/login "
+          },
+          "redirectURL": "",
+          "headersSize": 0,
+          "bodySize": 0,
+          "_transferSize": 0
+        },
+        "serverIPAddress": "127.0.0.1",
+        "timings": {
+          "blocked": -1,
+          "_blocked_queueing": -1,
+          "connect": -1,
+          "dns": -1,
+          "receive": -1,
+          "send": -1,
+          "ssl": -1,
+          "wait": -1
+        }
+      },
+      {
+        "startedDateTime": "2026-09-24T14:08:17.681041-07:00",
+        "time": 396000,
+        "request": {
+          "method": "POST",
+          "url": "https://127.0.0.1:8443/tls13/config",
+          "httpVersion": "",
+          "headers": [
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Content-Length",
+              "value": "5"
+            },
+            {
+              "name": "Host",
+              "value": "127.0.0.1:8443"
+            }
+          ],
+          "queryString": null,
+          "cookies": [],
+          "headersSize": 0,
+          "bodySize": 0,
+          "postData": {
+            "mimeType": "",
+            "size": 5,
+            "text": "hello"
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "200 OK",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Date",
+              "value": "Thu, 24 Sep 2026 21:08:17 GMT"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Keep-Alive",
+              "value": "timeout=5"
+            },
+            {
+              "name": "Content-Length",
+              "value": "28"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "mimeType": "",
+            "size": 28,
+            "text": "reply to /tls13/config hello"
+          },
+          "redirectURL": "",
+          "headersSize": 0,
+          "bodySize": 0,
+          "_transferSize": 0
+        },
+        "serverIPAddress": "127.0.0.1",
+        "timings": {
+          "blocked": -1,
+          "_blocked_queueing": -1,
+          "connect": -1,
+          "dns": -1,
+          "receive": -1,
+          "send": -1,
+          "ssl": -1,
+          "wait": -1
+        }
+      },
+      {
+        "startedDateTime": "2026-09-24T14:08:17.684339-07:00",
+        "time": 225000,
+        "request": {
+          "method": "GET",
+          "url": "https://127.0.0.1:8443/tls12-gcm/login",
+          "httpVersion": "",
+          "headers": [
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Host",
+              "value": "127.0.0.1:8443"
+            }
+          ],
+          "queryString": null,
+          "cookies": [],
+          "headersSize": 0,
+          "bodySize": 0,
+          "postData": {
+            "mimeType": "",
+            "size": 0,
+            "text": ""
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "200 OK",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Date",
+              "value": "Thu, 24 Sep 2026 21:08:17 GMT"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Keep-Alive",
+              "value": "timeout=5"
+            },
+            {
+              "name": "Content-Length",
+              "value": "26"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "mimeType": "",
+            "size": 26,
+            "text": "reply to /tls12-gcm/login "
+          },
+          "redirectURL": "",
+          "headersSize": 0,
+          "bodySize": 0,
+          "_transferSize": 0
+        },
+        "serverIPAddress": "127.0.0.1",
+        "timings": {
+          "blocked": -1,
+          "_blocked_queueing": -1,
+          "connect": -1,
+          "dns": -1,
+          "receive": -1,
+          "send": -1,
+          "ssl": -1,
+          "wait": -1
+        }
+      },
+      {
+        "startedDateTime": "2026-09-24T14:08:17.684954-07:00",
+        "time": 140000,
+        "request": {
+          "method": "POST",
+          "url": "https://127.0.0.1:8443/tls12-gcm/config",
+          "httpVersion": "",
+          "headers": [
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Content-Length",
+              "value": "5"
+            },
+            {
+              "name": "Host",
+              "value": "127.0.0.1:8443"
+            }
+          ],
+          "queryString": null,
+          "cookies": [],
+          "headersSize": 0,
+          "bodySize": 0,
+          "postData": {
+            "mimeType": "",
+            "size": 5,
+            "text": "hello"
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "200 OK",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Date",
+              "value": "Thu, 24 Sep 2026 21:08:17 GMT"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Keep-Alive",
+              "value": "timeout=5"
+            },
+            {
+              "name": "Content-Length",
+              "value": "32"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "mimeType": "",
+            "size": 32,
+            "text": "reply to /tls12-gcm/config hello"
+          },
+          "redirectURL": "",
+          "headersSize": 0,
+          "bodySize": 0,
+          "_transferSize": 0
+        },
+        "serverIPAddress": "127.0.0.1",
+        "timings": {
+          "blocked": -1,
+          "_blocked_queueing": -1,
+          "connect": -1,
+          "dns": -1,
+          "receive": -1,
+          "send": -1,
+          "ssl": -1,
+          "wait": -1
+        }
+      },
+      {
+        "startedDateTime": "2026-09-24T14:08:17.686984-07:00",
+        "time": 125000,
+        "request": {
+          "method": "GET",
+          "url": "https://127.0.0.1:8443/tls12-cbc-etm/login",
+          "httpVersion": "",
+          "headers": [
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Host",
+              "value": "127.0.0.1:8443"
+            }
+          ],
+          "queryString": null,
+          "cookies": [],
+          "headersSize": 0,
+          "bodySize": 0,
+          "postData": {
+            "mimeType": "",
+            "size": 0,
+            "text": ""
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "200 OK",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Date",
+              "value": "Thu, 24 Sep 2026 21:08:17 GMT"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Keep-Alive",
+              "value": "timeout=5"
+            },
+            {
+              "name": "Content-Length",
+              "value": "30"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "mimeType": "",
+            "size": 30,
+            "text": "reply to /tls12-cbc-etm/login "
+          },
+          "redirectURL": "",
+          "headersSize": 0,
+          "bodySize": 0,
+          "_transferSize": 0
+        },
+        "serverIPAddress": "127.0.0.1",
+        "timings": {
+          "blocked": -1,
+          "_blocked_queueing": -1,
+          "connect": -1,
+          "dns": -1,
+          "receive": -1,
+          "send": -1,
+          "ssl": -1,
+          "wait": -1
+        }
+      },
+      {
+        "startedDateTime": "2026-09-24T14:08:17.687426-07:00",
+        "time": 217000,
+        "request": {
+          "method": "POST",
+          "url": "https://127.0.0.1:8443/tls12-cbc-etm/config",
+          "httpVersion": "",
+          "headers": [
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Content-Length",
+              "value": "5"
+            },
+            {
+              "name": "Host",
+              "value": "127.0.0.1:8443"
+            }
+          ],
+          "queryString": null,
+          "cookies": [],
+          "headersSize": 0,
+          "bodySize": 0,
+          "postData": {
+            "mimeType": "",
+            "size": 5,
+            "text": "hello"
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "200 OK",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Date",
+              "value": "Thu, 24 Sep 2026 21:08:17 GMT"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Keep-Alive",
+              "value": "timeout=5"
+            },
+            {
+              "name": "Content-Length",
+              "value": "36"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "mimeType": "",
+            "size": 36,
+            "text": "reply to /tls12-cbc-etm/config hello"
+          },
+          "redirectURL": "",
+          "headersSize": 0,
+          "bodySize": 0,
+          "_transferSize": 0
+        },
+        "serverIPAddress": "127.0.0.1",
+        "timings": {
+          "blocked": -1,
+          "_blocked_queueing": -1,
+          "connect": -1,
+          "dns": -1,
+          "receive": -1,
+          "send": -1,
+          "ssl": -1,
+          "wait": -1
+        }
+      },
+      {
+        "startedDateTime": "2026-09-24T14:08:17.689343-07:00",
+        "time": 122000,
+        "request": {
+          "method": "GET",
+          "url": "https://127.0.0.1:8443/tls12-chacha/login",
+          "httpVersion": "",
+          "headers": [
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Host",
+              "value": "127.0.0.1:8443"
+            }
+          ],
+          "queryString": null,
+          "cookies": [],
+          "headersSize": 0,
+          "bodySize": 0,
+          "postData": {
+            "mimeType": "",
+            "size": 0,
+            "text": ""
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "200 OK",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Date",
+              "value": "Thu, 24 Sep 2026 21:08:17 GMT"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Keep-Alive",
+              "value": "timeout=5"
+            },
+            {
+              "name": "Content-Length",
+              "value": "29"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "mimeType": "",
+            "size": 29,
+            "text": "reply to /tls12-chacha/login "
+          },
+          "redirectURL": "",
+          "headersSize": 0,
+          "bodySize": 0,
+          "_transferSize": 0
+        },
+        "serverIPAddress": "127.0.0.1",
+        "timings": {
+          "blocked": -1,
+          "_blocked_queueing": -1,
+          "connect": -1,
+          "dns": -1,
+          "receive": -1,
+          "send": -1,
+          "ssl": -1,
+          "wait": -1
+        }
+      },
+      {
+        "startedDateTime": "2026-09-24T14:08:17.689768-07:00",
+        "time": 159000,
+        "request": {
+          "method": "POST",
+          "url": "https://127.0.0.1:8443/tls12-chacha/config",
+          "httpVersion": "",
+          "headers": [
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Content-Length",
+              "value": "5"
+            },
+            {
+              "name": "Host",
+              "value": "127.0.0.1:8443"
+            }
+          ],
+          "queryString": null,
+          "cookies": [],
+          "headersSize": 0,
+          "bodySize": 0,
+          "postData": {
+            "mimeType": "",
+            "size": 5,
+            "text": "hello"
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "200 OK",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Date",
+              "value": "Thu, 24 Sep 2026 21:08:17 GMT"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Keep-Alive",
+              "value": "timeout=5"
+            },
+            {
+              "name": "Content-Length",
+              "value": "35"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "mimeType": "",
+            "size": 35,
+            "text": "reply to /tls12-chacha/config hello"
+          },
+          "redirectURL": "",
+          "headersSize": 0,
+          "bodySize": 0,
+          "_transferSize": 0
+        },
+        "serverIPAddress": "127.0.0.1",
+        "timings": {
+          "blocked": -1,
+          "_blocked_queueing": -1,
+          "connect": -1,
+          "dns": -1,
+          "receive": -1,
+          "send": -1,
+          "ssl": -1,
+          "wait": -1
+        }
+      },
+      {
+        "startedDateTime": "2026-09-24T14:08:17.691462-07:00",
+        "time": 223000,
+        "request": {
+          "method": "GET",
+          "url": "https://127.0.0.1:8443/tls10-cbc/login",
+          "httpVersion": "",
+          "headers": [
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Host",
+              "value": "127.0.0.1:8443"
+            }
+          ],
+          "queryString": null,
+          "cookies": [],
+          "headersSize": 0,
+          "bodySize": 0,
+          "postData": {
+            "mimeType": "",
+            "size": 0,
+            "text": ""
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "200 OK",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Content-Length",
+              "value": "26"
+            },
+            {
+              "name": "Date",
+              "value": "Thu, 24 Sep 2026 21:08:17 GMT"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "mimeType": "",
+            "size": 26,
+            "text": "reply to /tls10-cbc/login "
+          },
+          "redirectURL": "",
+          "headersSize": 0,
+          "bodySize": 0,
+          "_transferSize": 0
+        },
+        "serverIPAddress": "127.0.0.1",
+        "timings": {
+          "blocked": -1,
+          "_blocked_queueing": -1,
+          "connect": -1,
+          "dns": -1,
+          "receive": -1,
+          "send": -1,
+          "ssl": -1,
+          "wait": -1
+        }
+      },
+      {
+        "startedDateTime": "2026-09-24T14:08:17.692253-07:00",
+        "time": 221000,
+        "request": {
+          "method": "POST",
+          "url": "https://127.0.0.1:8443/tls10-cbc/config",
+          "httpVersion": "",
+          "headers": [
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Content-Length",
+              "value": "5"
+            },
+            {
+              "name": "Host",
+              "value": "127.0.0.1:8443"
+            }
+          ],
+          "queryString": null,
+          "cookies": [],
+          "headersSize": 0,
+          "bodySize": 0,
+          "postData": {
+            "mimeType": "",
+            "size": 5,
+            "text": "hello"
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "200 OK",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Content-Length",
+              "value": "32"
+            },
+            {
+              "name": "Date",
+              "value": "Thu, 24 Sep 2026 21:08:17 GMT"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "mimeType": "",
+            "size": 32,
+            "text": "reply to /tls10-cbc/config hello"
+          },
+          "redirectURL": "",
+          "headersSize": 0,
+          "bodySize": 0,
+          "_transferSize": 0
+        },
+        "serverIPAddress": "127.0.0.1",
+        "timings": {
+          "blocked": -1,
+          "_blocked_queueing": -1,
+          "connect": -1,
+          "dns": -1,
+          "receive": -1,
+          "send": -1,
+          "ssl": -1,
+          "wait": -1
+        }
+      }
+    ]
+  }
+}

@@ -8,7 +8,9 @@ cd $(dirname "${BASH_SOURCE[0]}")
 for f in captures/*.pcap
 do
     FILE=captures/$(basename -s.pcap "$f")
-    ../pcap2har $f > $FILE.output
+    KEYLOG=()
+    [ -f "$FILE.keylog" ] && KEYLOG=(--keylog "$FILE.keylog")
+    ../pcap2har "${KEYLOG[@]}" $f > $FILE.output
     diff <(sort_data request.url "$FILE.output") <(sort_data request.url "$FILE.expected") || (echo $FILE urls different && false)
     diff <(sort_data response.content.text "$FILE.output") <(sort_data response.content.text "$FILE.expected") || (echo $FILE content different && false)
 done

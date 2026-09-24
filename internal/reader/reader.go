@@ -3,6 +3,7 @@ package reader
 import (
 	"bufio"
 	"compress/gzip"
+	"crypto/tls"
 	"io"
 	"io/ioutil"
 	"log"
@@ -12,12 +13,14 @@ import (
 
 	"github.com/gopacket/gopacket"
 	"github.com/gopacket/gopacket/tcpassembly/tcpreader"
+	"github.com/jb0n/pcap2har-go/internal/tlsdec"
 	"github.com/jb0n/pcap2har-go/pcap-cli/tcp"
 )
 
 type HTTPConversationReaders struct {
 	mu            sync.Mutex
 	conversations map[ConversationAddress][]Conversation
+	tls           *tlsdec.Conns
 }
 
 type ConversationAddress struct {
@@ -42,6 +45,24 @@ func New() *HTTPConversationReaders {
 	}
 }
 
+// SetKeylogFile makes the reader decrypt TLS streams with the secrets in the NSS key log at path.
+func (h *HTTPConversationReaders) SetKeylogFile(path string) error {
+	kl, err := tlsdec.LoadKeylog(path)
+	if err != nil {
+		return err
+	}
+	h.tls = tlsdec.NewConns(kl)
+	return nil
+}
+
+// TLSSummary counts the TLS streams per outcome. It is empty when no key log is set.
+func (h *HTTPConversationReaders) TLSSummary() string {
+	if h.tls == nil {
+		return ""
+	}
+	return h.tls.Summary()
+}
+
 type streamDecoder func(*tcp.SavePointReader, *tcp.TimeCaptureReader, gopacket.Flow, gopacket.Flow) error
 
 func drain(spr *tcp.SavePointReader, _ *tcp.TimeCaptureReader, _, _ gopacket.Flow) error {
@@ -51,10 +72,16 @@ func drain(spr *tcp.SavePointReader, _ *tcp.TimeCaptureReader, _, _ gopacket.Flo
 
 // ReadStream tries to read tcp connections and extract HTTP conversations.
 func (h *HTTPConversationReaders) ReadStream(r tcp.Stream, a, b gopacket.Flow, completed chan interface{}) {
+	isTLS := false
+	if h.tls != nil {
+		r, isTLS = h.tls.Wrap(r, a, b)
+	}
 	t := tcp.NewTimeCaptureReader(r)
 	spr := tcp.NewSavePointReader(t)
 	decoders := []streamDecoder{
-		h.ReadHTTPRequest,
+		func(spr *tcp.SavePointReader, t *tcp.TimeCaptureReader, a, b gopacket.Flow) error {
+			return h.readHTTPRequest(spr, t, a, b, isTLS)
+		},
 		h.ReadHTTPResponse,
 		h.ReadFCGIRequest,
 		drain,
@@ -131,6 +158,12 @@ func (h *HTTPConversationReaders) ReadHTTPResponse(spr *tcp.SavePointReader, t *
 
 // ReadHTTPRequest try to read the stream as an HTTP request.
 func (h *HTTPConversationReaders) ReadHTTPRequest(spr *tcp.SavePointReader, t *tcp.TimeCaptureReader, a, b gopacket.Flow) error {
+	return h.readHTTPRequest(spr, t, a, b, false)
+}
+
+func (h *HTTPConversationReaders) readHTTPRequest(
+	spr *tcp.SavePointReader, t *tcp.TimeCaptureReader, a, b gopacket.Flow, isTLS bool,
+) error {
 	spr.SavePoint()
 	buf := bufio.NewReader(spr)
 
@@ -139,6 +172,10 @@ func (h *HTTPConversationReaders) ReadHTTPRequest(spr *tcp.SavePointReader, t *t
 		return err
 	}
 
+	if isTLS {
+		// The HAR writer picks the https scheme from a non-nil TLS state.
+		req.TLS = &tls.ConnectionState{}
+	}
 	spr.SavePoint()
 	defer req.Body.Close()
 	body, err := ioutil.ReadAll(req.Body)
@@ -198,22 +235,20 @@ func (h *HTTPConversationReaders) updateResponse(a, b gopacket.Flow, update func
 	h.mu.Lock()
 	defer h.mu.Unlock()
 	conversations := h.conversations[address]
-	if conversations == nil {
-		c := Conversation{
-			Address: address,
-		}
-		update(&c)
-		h.conversations[address] = append(h.conversations[address], c)
-		return
-	}
 	for n := 0; n < len(conversations); n++ {
 		c := conversations[n]
 		if conversations[n].Response == nil {
 			update(&c)
 			h.conversations[address][n] = c
-			break
+			return
 		}
-		// FIXME: should think about what we do when we don't find
-		// the other side of the conversation.
 	}
+	// The two directions decode in separate goroutines, so a response can arrive before its request. It takes the
+	// next slot, and addRequest fills the request into the first slot that lacks one, so the nth request still
+	// pairs with the nth response.
+	c := Conversation{
+		Address: address,
+	}
+	update(&c)
+	h.conversations[address] = append(h.conversations[address], c)
 }

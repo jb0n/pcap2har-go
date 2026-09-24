@@ -38,6 +38,14 @@ rather than because things are particularly complex).
 	sudo tcpdump port 80 -w packets.dump
 	pcap2har packets.dump > traffic.har
 
+To decrypt TLS, give it the NSS key log the client wrote (`SSLKEYLOGFILE`, or `node --tls-keylog=keys.log`):
+
+	pcap2har --keylog keys.log packets.dump > traffic.har
+
+It decrypts TLS 1.3 and TLS 1.0 to 1.2 with AES-GCM, ChaCha20-Poly1305 and AES-CBC, including
+encrypt-then-MAC. At the end it logs how many TLS streams it decrypted, and why any stayed encrypted
+(`no-key`, `one-sided`, `unsupported-suite-xxxx`, `decrypt-failed`).
+
 HAR files contain a lot of info you probably don't need.  I like to use tools
 like jq to boil down the json into more concise info.  
 
@@ -60,10 +68,8 @@ files and it's a json is a convenient format to look through.
 
 http://www.softwareishard.com/blog/har-12-spec/
 
-Note that it's not going to do well with TLS traffic, so this won't be
-much use for most traffic you do with the outside these days.  This is
-often really handy for development however.  Especially with internal
-web service development.
+TLS traffic needs a key log from the client (see `--keylog` above). Without one, TLS streams do not
+decode.
 
 This is largely based off the example in the documentation:
 
@@ -78,8 +84,6 @@ It has various limitations.
   decode http features like chunked encoding.  This can be really 
   useful (not having to decode base64 content), or frustrating when
   those details are what would help you spot a problem.
-* I haven't looked at how you'd decode TLS traffic.  Presumably I'd
-  need to provide keys for that.
 * Websockets aren't decoded.
 * The time for the entry will be derived from the timing of the data packets,
   without taking into consideration the TCP handshake.  Time to process the

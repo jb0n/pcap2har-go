@@ -20,13 +20,21 @@ import (
 	"github.com/spf13/pflag"
 )
 
+// keylogReader is a ConnectionReader that can decrypt TLS.
+type keylogReader interface {
+	SetKeylogFile(path string) error
+	TLSSummary() string
+}
+
 func Main(_ string, r tcp.ConnectionReader, outputFunc func(io.Writer, chan any)) {
 	var assemblyDebug, displayVersion bool
 	var serverPorts []int32
+	var keylog string
 
 	pflag.BoolVar(&displayVersion, "version", false, "Display program version")
 	pflag.BoolVar(&assemblyDebug, "assembly-debug", false, "Debug log from the tcp assembly")
 	pflag.Int32SliceVar(&serverPorts, "server-ports", []int32{}, "Server ports")
+	pflag.StringVar(&keylog, "keylog", "", "NSS key log file (SSLKEYLOGFILE, node --tls-keylog) to decrypt TLS")
 	pflag.Parse()
 
 	if displayVersion {
@@ -46,6 +54,17 @@ func Main(_ string, r tcp.ConnectionReader, outputFunc func(io.Writer, chan any)
 
 	if len(files) == 0 {
 		log.Fatal("Must specify filename")
+	}
+
+	var kr keylogReader
+	if keylog != "" {
+		var ok bool
+		if kr, ok = r.(keylogReader); !ok {
+			log.Fatal("--keylog: this reader cannot decrypt TLS")
+		}
+		if err := kr.SetKeylogFile(keylog); err != nil {
+			log.Fatalf("--keylog: err=%v", err)
+		}
 	}
 
 	streamFactory := tcp.NewFactory(r)
@@ -74,10 +93,25 @@ func Main(_ string, r tcp.ConnectionReader, outputFunc func(io.Writer, chan any)
 	assembler.FlushAll()
 
 	streamFactory.Output(os.Stdout, outputFunc)
+	if kr != nil {
+		log.Println(kr.TLSSummary())
+	}
 }
 
 func Convert(files []string) ([]byte, error) {
+	har, _, err := ConvertWithKeylog(files, "")
+	return har, err
+}
+
+// ConvertWithKeylog converts like Convert, and decrypts TLS with the NSS key log at keylog when it is not empty.
+// The string is the count of TLS streams per outcome, so a caller can see the streams that stayed encrypted.
+func ConvertWithKeylog(files []string, keylog string) ([]byte, string, error) {
 	r := reader.New()
+	if keylog != "" {
+		if err := r.SetKeylogFile(keylog); err != nil {
+			return nil, "", err
+		}
+	}
 	streamFactory := tcp.NewFactory(r)
 	streamPool := tcpassembly.NewStreamPool(streamFactory)
 	assembler := tcpassembly.NewAssembler(streamPool)
@@ -85,7 +119,7 @@ func Convert(files []string) ([]byte, error) {
 	for _, filename := range files {
 		handle, err := pcap.OpenOffline(filename)
 		if err != nil {
-			return nil, fmt.Errorf("pcap.OpenOffline on %s failed. err=%w", filename, err)
+			return nil, "", fmt.Errorf("pcap.OpenOffline on %s failed. err=%w", filename, err)
 		}
 		defer handle.Close()
 		packetSource := gopacket.NewPacketSource(handle, handle.LinkType())
@@ -102,7 +136,7 @@ func Convert(files []string) ([]byte, error) {
 	assembler.FlushAll()
 	buf := &bytes.Buffer{}
 	streamFactory.Output(buf, convertOutputFunc(r))
-	return buf.Bytes(), nil
+	return buf.Bytes(), r.TLSSummary(), nil
 }
 
 func convertOutputFunc(r *reader.HTTPConversationReaders) func(io.Writer, chan any) {
