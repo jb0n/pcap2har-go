@@ -36,7 +36,7 @@ func (d *FCGIInfoGatherer) RequestInfo(req *http.Request) {
 }
 
 func (d *FCGIInfoGatherer) ResponseInfo(resp *http.Response, body []byte) {
-	d.h.addResponse(d.a, d.b, resp, body, d.t.Seen())
+	d.h.addResponse(d.a, d.b, resp, body, len(body), d.t.Seen())
 }
 func (d *FCGIInfoGatherer) ReturnValue(int) {
 }

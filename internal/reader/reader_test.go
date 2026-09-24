@@ -115,10 +115,11 @@ func TestHTTPStreamRead(t *testing.T) {
 				},
 				ContentLength: 2,
 			},
-			RequestBody:  []byte(""),
-			ResponseBody: []byte("{}"),
-			RequestSeen:  []time.Time{{}},
-			ResponseSeen: []time.Time{{}},
+			RequestBody:      []byte(""),
+			ResponseBody:     []byte("{}"),
+			ResponseWireSize: 2,
+			RequestSeen:      []time.Time{{}},
+			ResponseSeen:     []time.Time{{}},
 		},
 		{
 			Address: reader.ConversationAddress{IP: ipFlow, Port: portFlow},
@@ -150,8 +151,9 @@ func TestHTTPStreamRead(t *testing.T) {
 				},
 				ContentLength: 2,
 			},
-			RequestBody:  []byte(""),
-			ResponseBody: []byte("--"),
+			RequestBody:      []byte(""),
+			ResponseBody:     []byte("--"),
+			ResponseWireSize: 2,
 		},
 	}
 

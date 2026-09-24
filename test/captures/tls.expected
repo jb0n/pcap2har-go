@@ -3,7 +3,7 @@
     "version": "1.2",
     "creator": {
       "name": "pcap2har",
-      "version": "63c5006"
+      "version": "4ce682b"
     },
     "pages": [
       {
@@ -104,7 +104,7 @@
         "request": {
           "method": "GET",
           "url": "https://127.0.0.1:8443/tls13/login",
-          "httpVersion": "",
+          "httpVersion": "HTTP/1.1",
           "headers": [
             {
               "name": "Connection",
@@ -127,7 +127,7 @@
         },
         "response": {
           "status": 200,
-          "statusText": "200 OK",
+          "statusText": "OK",
           "httpVersion": "HTTP/1.1",
           "headers": [
             {
@@ -151,11 +151,12 @@
           "content": {
             "mimeType": "",
             "size": 22,
-            "text": "reply to /tls13/login "
+            "text": "reply to /tls13/login ",
+            "compression": 0
           },
           "redirectURL": "",
           "headersSize": 0,
-          "bodySize": 0,
+          "bodySize": 22,
           "_transferSize": 0
         },
         "serverIPAddress": "127.0.0.1",
@@ -176,7 +177,7 @@
         "request": {
           "method": "POST",
           "url": "https://127.0.0.1:8443/tls13/config",
-          "httpVersion": "",
+          "httpVersion": "HTTP/1.1",
           "headers": [
             {
               "name": "Connection",
@@ -203,17 +204,9 @@
         },
         "response": {
           "status": 200,
-          "statusText": "200 OK",
+          "statusText": "OK",
           "httpVersion": "HTTP/1.1",
           "headers": [
-            {
-              "name": "Date",
-              "value": "Thu, 24 Sep 2026 21:08:17 GMT"
-            },
-            {
-              "name": "Connection",
-              "value": "keep-alive"
-            },
             {
               "name": "Keep-Alive",
               "value": "timeout=5"
@@ -221,17 +214,26 @@
             {
               "name": "Content-Length",
               "value": "28"
+            },
+            {
+              "name": "Date",
+              "value": "Thu, 24 Sep 2026 21:08:17 GMT"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
             }
           ],
           "cookies": [],
           "content": {
             "mimeType": "",
             "size": 28,
-            "text": "reply to /tls13/config hello"
+            "text": "reply to /tls13/config hello",
+            "compression": 0
           },
           "redirectURL": "",
           "headersSize": 0,
-          "bodySize": 0,
+          "bodySize": 28,
           "_transferSize": 0
         },
         "serverIPAddress": "127.0.0.1",
@@ -252,7 +254,7 @@
         "request": {
           "method": "GET",
           "url": "https://127.0.0.1:8443/tls12-gcm/login",
-          "httpVersion": "",
+          "httpVersion": "HTTP/1.1",
           "headers": [
             {
               "name": "Connection",
@@ -275,17 +277,9 @@
         },
         "response": {
           "status": 200,
-          "statusText": "200 OK",
+          "statusText": "OK",
           "httpVersion": "HTTP/1.1",
           "headers": [
-            {
-              "name": "Date",
-              "value": "Thu, 24 Sep 2026 21:08:17 GMT"
-            },
-            {
-              "name": "Connection",
-              "value": "keep-alive"
-            },
             {
               "name": "Keep-Alive",
               "value": "timeout=5"
@@ -293,17 +287,26 @@
             {
               "name": "Content-Length",
               "value": "26"
+            },
+            {
+              "name": "Date",
+              "value": "Thu, 24 Sep 2026 21:08:17 GMT"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
             }
           ],
           "cookies": [],
           "content": {
             "mimeType": "",
             "size": 26,
-            "text": "reply to /tls12-gcm/login "
+            "text": "reply to /tls12-gcm/login ",
+            "compression": 0
           },
           "redirectURL": "",
           "headersSize": 0,
-          "bodySize": 0,
+          "bodySize": 26,
           "_transferSize": 0
         },
         "serverIPAddress": "127.0.0.1",
@@ -324,7 +327,7 @@
         "request": {
           "method": "POST",
           "url": "https://127.0.0.1:8443/tls12-gcm/config",
-          "httpVersion": "",
+          "httpVersion": "HTTP/1.1",
           "headers": [
             {
               "name": "Connection",
@@ -351,7 +354,7 @@
         },
         "response": {
           "status": 200,
-          "statusText": "200 OK",
+          "statusText": "OK",
           "httpVersion": "HTTP/1.1",
           "headers": [
             {
@@ -375,11 +378,12 @@
           "content": {
             "mimeType": "",
             "size": 32,
-            "text": "reply to /tls12-gcm/config hello"
+            "text": "reply to /tls12-gcm/config hello",
+            "compression": 0
           },
           "redirectURL": "",
           "headersSize": 0,
-          "bodySize": 0,
+          "bodySize": 32,
           "_transferSize": 0
         },
         "serverIPAddress": "127.0.0.1",
@@ -400,7 +404,7 @@
         "request": {
           "method": "GET",
           "url": "https://127.0.0.1:8443/tls12-cbc-etm/login",
-          "httpVersion": "",
+          "httpVersion": "HTTP/1.1",
           "headers": [
             {
               "name": "Connection",
@@ -423,7 +427,7 @@
         },
         "response": {
           "status": 200,
-          "statusText": "200 OK",
+          "statusText": "OK",
           "httpVersion": "HTTP/1.1",
           "headers": [
             {
@@ -447,11 +451,12 @@
           "content": {
             "mimeType": "",
             "size": 30,
-            "text": "reply to /tls12-cbc-etm/login "
+            "text": "reply to /tls12-cbc-etm/login ",
+            "compression": 0
           },
           "redirectURL": "",
           "headersSize": 0,
-          "bodySize": 0,
+          "bodySize": 30,
           "_transferSize": 0
         },
         "serverIPAddress": "127.0.0.1",
@@ -472,7 +477,7 @@
         "request": {
           "method": "POST",
           "url": "https://127.0.0.1:8443/tls12-cbc-etm/config",
-          "httpVersion": "",
+          "httpVersion": "HTTP/1.1",
           "headers": [
             {
               "name": "Connection",
@@ -499,7 +504,7 @@
         },
         "response": {
           "status": 200,
-          "statusText": "200 OK",
+          "statusText": "OK",
           "httpVersion": "HTTP/1.1",
           "headers": [
             {
@@ -523,11 +528,12 @@
           "content": {
             "mimeType": "",
             "size": 36,
-            "text": "reply to /tls12-cbc-etm/config hello"
+            "text": "reply to /tls12-cbc-etm/config hello",
+            "compression": 0
           },
           "redirectURL": "",
           "headersSize": 0,
-          "bodySize": 0,
+          "bodySize": 36,
           "_transferSize": 0
         },
         "serverIPAddress": "127.0.0.1",
@@ -548,7 +554,7 @@
         "request": {
           "method": "GET",
           "url": "https://127.0.0.1:8443/tls12-chacha/login",
-          "httpVersion": "",
+          "httpVersion": "HTTP/1.1",
           "headers": [
             {
               "name": "Connection",
@@ -571,7 +577,7 @@
         },
         "response": {
           "status": 200,
-          "statusText": "200 OK",
+          "statusText": "OK",
           "httpVersion": "HTTP/1.1",
           "headers": [
             {
@@ -595,11 +601,12 @@
           "content": {
             "mimeType": "",
             "size": 29,
-            "text": "reply to /tls12-chacha/login "
+            "text": "reply to /tls12-chacha/login ",
+            "compression": 0
           },
           "redirectURL": "",
           "headersSize": 0,
-          "bodySize": 0,
+          "bodySize": 29,
           "_transferSize": 0
         },
         "serverIPAddress": "127.0.0.1",
@@ -620,7 +627,7 @@
         "request": {
           "method": "POST",
           "url": "https://127.0.0.1:8443/tls12-chacha/config",
-          "httpVersion": "",
+          "httpVersion": "HTTP/1.1",
           "headers": [
             {
               "name": "Connection",
@@ -647,13 +654,9 @@
         },
         "response": {
           "status": 200,
-          "statusText": "200 OK",
+          "statusText": "OK",
           "httpVersion": "HTTP/1.1",
           "headers": [
-            {
-              "name": "Date",
-              "value": "Thu, 24 Sep 2026 21:08:17 GMT"
-            },
             {
               "name": "Connection",
               "value": "keep-alive"
@@ -665,17 +668,22 @@
             {
               "name": "Content-Length",
               "value": "35"
+            },
+            {
+              "name": "Date",
+              "value": "Thu, 24 Sep 2026 21:08:17 GMT"
             }
           ],
           "cookies": [],
           "content": {
             "mimeType": "",
             "size": 35,
-            "text": "reply to /tls12-chacha/config hello"
+            "text": "reply to /tls12-chacha/config hello",
+            "compression": 0
           },
           "redirectURL": "",
           "headersSize": 0,
-          "bodySize": 0,
+          "bodySize": 35,
           "_transferSize": 0
         },
         "serverIPAddress": "127.0.0.1",
@@ -696,7 +704,7 @@
         "request": {
           "method": "GET",
           "url": "https://127.0.0.1:8443/tls10-cbc/login",
-          "httpVersion": "",
+          "httpVersion": "HTTP/1.1",
           "headers": [
             {
               "name": "Connection",
@@ -719,13 +727,9 @@
         },
         "response": {
           "status": 200,
-          "statusText": "200 OK",
+          "statusText": "OK",
           "httpVersion": "HTTP/1.1",
           "headers": [
-            {
-              "name": "Content-Length",
-              "value": "26"
-            },
             {
               "name": "Date",
               "value": "Thu, 24 Sep 2026 21:08:17 GMT"
@@ -737,17 +741,22 @@
             {
               "name": "Keep-Alive",
               "value": "timeout=5"
+            },
+            {
+              "name": "Content-Length",
+              "value": "26"
             }
           ],
           "cookies": [],
           "content": {
             "mimeType": "",
             "size": 26,
-            "text": "reply to /tls10-cbc/login "
+            "text": "reply to /tls10-cbc/login ",
+            "compression": 0
           },
           "redirectURL": "",
           "headersSize": 0,
-          "bodySize": 0,
+          "bodySize": 26,
           "_transferSize": 0
         },
         "serverIPAddress": "127.0.0.1",
@@ -768,7 +777,7 @@
         "request": {
           "method": "POST",
           "url": "https://127.0.0.1:8443/tls10-cbc/config",
-          "httpVersion": "",
+          "httpVersion": "HTTP/1.1",
           "headers": [
             {
               "name": "Connection",
@@ -795,17 +804,9 @@
         },
         "response": {
           "status": 200,
-          "statusText": "200 OK",
+          "statusText": "OK",
           "httpVersion": "HTTP/1.1",
           "headers": [
-            {
-              "name": "Content-Length",
-              "value": "32"
-            },
-            {
-              "name": "Date",
-              "value": "Thu, 24 Sep 2026 21:08:17 GMT"
-            },
             {
               "name": "Connection",
               "value": "keep-alive"
@@ -813,17 +814,26 @@
             {
               "name": "Keep-Alive",
               "value": "timeout=5"
+            },
+            {
+              "name": "Content-Length",
+              "value": "32"
+            },
+            {
+              "name": "Date",
+              "value": "Thu, 24 Sep 2026 21:08:17 GMT"
             }
           ],
           "cookies": [],
           "content": {
             "mimeType": "",
             "size": 32,
-            "text": "reply to /tls10-cbc/config hello"
+            "text": "reply to /tls10-cbc/config hello",
+            "compression": 0
           },
           "redirectURL": "",
           "headersSize": 0,
-          "bodySize": 0,
+          "bodySize": 32,
           "_transferSize": 0
         },
         "serverIPAddress": "127.0.0.1",

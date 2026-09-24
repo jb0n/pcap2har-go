@@ -2,14 +2,20 @@ package reader
 
 import (
 	"bufio"
+	"bytes"
+	"compress/flate"
 	"compress/gzip"
+	"compress/zlib"
 	"crypto/tls"
 	"io"
 	"io/ioutil"
 	"log"
 	"net/http"
+	"strings"
 	"sync"
 	"time"
+
+	"github.com/andybalholm/brotli"
 
 	"github.com/gopacket/gopacket"
 	"github.com/gopacket/gopacket/tcpassembly/tcpreader"
@@ -32,8 +38,10 @@ type Conversation struct {
 	RequestBody  []byte
 	Response     *http.Response
 	ResponseBody []byte
-	RequestSeen  []time.Time
-	ResponseSeen []time.Time
+	// ResponseWireSize is the body length before the Content-Encoding came off.
+	ResponseWireSize int
+	RequestSeen      []time.Time
+	ResponseSeen     []time.Time
 	// FastCGI info if present
 	Errors []string
 }
@@ -126,20 +134,7 @@ func (h *HTTPConversationReaders) ReadHTTPResponse(spr *tcp.SavePointReader, t *
 	spr.SavePoint()
 	defer res.Body.Close()
 
-	var reader io.ReadCloser
-	if res.Header.Get("Content-Encoding") == "gzip" {
-		reader, err = gzip.NewReader(res.Body)
-		if err != nil {
-			// just get it raw
-			reader = res.Body
-		} else {
-			defer reader.Close()
-		}
-	} else {
-		reader = res.Body
-	}
-
-	body, err := ioutil.ReadAll(reader)
+	body, err := io.ReadAll(res.Body)
 	// unexpected EOF reading trailer seems to indicate truncated stream when
 	// dealing with chunked encdoing.  If we fall back to not reading it, we
 	// still have the same basic output, just with all the chunking arterfacts.
@@ -152,8 +147,41 @@ func (h *HTTPConversationReaders) ReadHTTPResponse(spr *tcp.SavePointReader, t *
 			tcpreader.DiscardBytesToEOF(buf)
 		}
 	}
-	h.addResponse(a, b, res, body, t.Seen())
+	wireSize := len(body)
+	if err == nil || err.Error() == "http: unexpected EOF reading trailer" {
+		body = decodeBody(res.Header.Get("Content-Encoding"), body)
+	}
+	h.addResponse(a, b, res, body, wireSize, t.Seen())
 	return err
+}
+
+// decodeBody removes the Content-Encoding, the way a browser does before it saves a HAR. A body that does not
+// decode stays as it came, so a truncated capture still shows what arrived.
+func decodeBody(encoding string, body []byte) []byte {
+	var r io.Reader
+	var err error
+	switch strings.ToLower(strings.TrimSpace(encoding)) {
+	case "gzip", "x-gzip":
+		r, err = gzip.NewReader(bytes.NewReader(body))
+	case "deflate":
+		// RFC 9110 says zlib, but some servers send raw deflate.
+		r, err = zlib.NewReader(bytes.NewReader(body))
+		if err != nil {
+			r, err = flate.NewReader(bytes.NewReader(body)), nil
+		}
+	case "br":
+		r = brotli.NewReader(bytes.NewReader(body))
+	default:
+		return body
+	}
+	if err != nil {
+		return body
+	}
+	decoded, err := io.ReadAll(r)
+	if err != nil {
+		return body
+	}
+	return decoded
 }
 
 // ReadHTTPRequest try to read the stream as an HTTP request.
@@ -222,10 +250,13 @@ func (h *HTTPConversationReaders) addErrorToResponse(a, b gopacket.Flow, errStri
 	})
 }
 
-func (h *HTTPConversationReaders) addResponse(a, b gopacket.Flow, res *http.Response, body []byte, seen []time.Time) {
+func (h *HTTPConversationReaders) addResponse(
+	a, b gopacket.Flow, res *http.Response, body []byte, wireSize int, seen []time.Time,
+) {
 	h.updateResponse(a, b, func(c *Conversation) {
 		c.Response = res
 		c.ResponseBody = body
+		c.ResponseWireSize = wireSize
 		c.ResponseSeen = seen
 	})
 }

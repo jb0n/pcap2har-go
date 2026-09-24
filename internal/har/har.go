@@ -2,12 +2,15 @@ package har
 
 import (
 	"bytes"
+	"encoding/base64"
 	"fmt"
 	"io/ioutil"
 	"net/http"
 	"sort"
+	"strconv"
 	"strings"
 	"time"
+	"unicode/utf8"
 
 	"github.com/jb0n/pcap2har-go/internal/reader"
 )
@@ -64,10 +67,13 @@ type RequestInfo struct {
 }
 
 type ContentInfo struct {
-	MimeType string     `json:"mimeType"`
-	Size     int        `json:"size"`
-	Text     string     `json:"text"`
-	Params   []PostData `json:"params,omitempty"`
+	MimeType string `json:"mimeType"`
+	Size     int    `json:"size"`
+	Text     string `json:"text"`
+	Encoding string `json:"encoding,omitempty"`
+	// Compression is the bytes the Content-Encoding saved. Only a response sets it.
+	Compression *int       `json:"compression,omitempty"`
+	Params      []PostData `json:"params,omitempty"`
 }
 
 type KeyValues struct {
@@ -142,16 +148,26 @@ func (h *Har) AddEntry(v reader.Conversation) {
 		}
 		headers := extractHeaders(v.Response.Header)
 		cookieInfo := extractCookies(v.Response.Cookies())
+		// A browser reports the decoded size, the bytes on the wire, and the difference as compression.
+		saved := len(v.ResponseBody) - v.ResponseWireSize
+		content := ContentInfo{
+			Size:        len(v.ResponseBody),
+			MimeType:    mimeType,
+			Text:        string(v.ResponseBody),
+			Compression: &saved,
+		}
+		// JSON strings hold only UTF-8, so a binary body goes in base64, the way a browser saves it.
+		if !utf8.Valid(v.ResponseBody) {
+			content.Text = base64.StdEncoding.EncodeToString(v.ResponseBody)
+			content.Encoding = "base64"
+		}
 		resp = ResponseInfo{
-			Content: ContentInfo{
-				Size:     len(v.ResponseBody),
-				MimeType: mimeType,
-				Text:     string(v.ResponseBody),
-			},
+			Content:     content,
+			BodySize:    v.ResponseWireSize,
 			Cookies:     cookieInfo,
 			Headers:     headers,
 			HTTPVersion: v.Response.Proto,
-			StatusText:  v.Response.Status,
+			StatusText:  strings.TrimSpace(strings.TrimPrefix(v.Response.Status, strconv.Itoa(v.Response.StatusCode))),
 			Status:      v.Response.StatusCode,
 			FCGIErrors:  v.Errors,
 		}
@@ -289,6 +305,7 @@ func extractRequest(v reader.Conversation) RequestInfo {
 	return RequestInfo{
 		Cookies:     cookieInfo,
 		Headers:     reqheaders,
+		HTTPVersion: v.Request.Proto,
 		Method:      v.Request.Method,
 		URL:         v.Request.URL.String(),
 		QueryString: queryString,
