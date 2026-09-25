@@ -3,7 +3,7 @@
     "version": "1.2",
     "creator": {
       "name": "pcap2har",
-      "version": "4ce682b"
+      "version": "a136464"
     },
     "pages": [
       {
@@ -206,68 +206,68 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "X-Forwarded-Proto",
-              "value": "https"
-            },
-            {
               "name": "Connection",
               "value": "close"
             },
             {
-              "name": "Sec-Fetch-Site",
-              "value": "same-origin"
-            },
-            {
-              "name": "Sec-Fetch-User",
-              "value": "?1"
-            },
-            {
-              "name": "Sec-Fetch-Dest",
-              "value": "document"
-            },
-            {
-              "name": "Referer",
-              "value": "https://insecure.demo/"
-            },
-            {
-              "name": "Cookie",
-              "value": "insecure-demo=1591381057.9633%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
-            },
-            {
-              "name": "Upgrade-Insecure-Requests",
-              "value": "1"
-            },
-            {
-              "name": "User-Agent",
-              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
-            },
-            {
-              "name": "Accept",
-              "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
-            },
-            {
-              "name": "Sec-Fetch-Mode",
-              "value": "navigate"
-            },
-            {
-              "name": "Accept-Encoding",
-              "value": "gzip, deflate, br"
-            },
-            {
-              "name": "Accept-Language",
-              "value": "en-GB,en-US;q=0.9,en;q=0.8"
-            },
-            {
-              "name": "X-Forwarded-Host",
-              "value": "insecure.demo"
+              "name": "Host",
+              "value": "demo"
             },
             {
               "name": "X-Forwarded-For",
               "value": "192.168.32.1"
             },
             {
-              "name": "Host",
-              "value": "demo"
+              "name": "X-Forwarded-Host",
+              "value": "insecure.demo"
+            },
+            {
+              "name": "X-Forwarded-Proto",
+              "value": "https"
+            },
+            {
+              "name": "accept",
+              "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+            },
+            {
+              "name": "accept-encoding",
+              "value": "gzip, deflate, br"
+            },
+            {
+              "name": "accept-language",
+              "value": "en-GB,en-US;q=0.9,en;q=0.8"
+            },
+            {
+              "name": "cookie",
+              "value": "insecure-demo=1591381057.9633%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
+            },
+            {
+              "name": "referer",
+              "value": "https://insecure.demo/"
+            },
+            {
+              "name": "sec-fetch-dest",
+              "value": "document"
+            },
+            {
+              "name": "sec-fetch-mode",
+              "value": "navigate"
+            },
+            {
+              "name": "sec-fetch-site",
+              "value": "same-origin"
+            },
+            {
+              "name": "sec-fetch-user",
+              "value": "?1"
+            },
+            {
+              "name": "upgrade-insecure-requests",
+              "value": "1"
+            },
+            {
+              "name": "user-agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
             }
           ],
           "queryString": null,
@@ -294,20 +294,20 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "Location",
-              "value": "/admin/login/?return=%2Fadmin"
-            },
-            {
-              "name": "Set-Cookie",
-              "value": "insecure-demo=1591381073.27228%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:17:53 GMT; secure; HttpOnly"
+              "name": "Connection",
+              "value": "close"
             },
             {
               "name": "Date",
               "value": "Fri, 05 Jun 2020 18:17:53 GMT"
             },
             {
-              "name": "Connection",
-              "value": "close"
+              "name": "Location",
+              "value": "/admin/login/?return=%2Fadmin"
+            },
+            {
+              "name": "Set-Cookie",
+              "value": "insecure-demo=1591381073.27228%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:17:53 GMT; secure; HttpOnly"
             }
           ],
           "cookies": [
@@ -351,68 +351,68 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "X-Forwarded-Host",
-              "value": "insecure.demo"
+              "name": "Connection",
+              "value": "close"
             },
             {
-              "name": "Accept",
-              "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
-            },
-            {
-              "name": "Referer",
-              "value": "https://insecure.demo/"
-            },
-            {
-              "name": "Cookie",
-              "value": "insecure-demo=1591381073.27228%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
+              "name": "Host",
+              "value": "demo"
             },
             {
               "name": "X-Forwarded-For",
               "value": "192.168.32.1"
             },
             {
+              "name": "X-Forwarded-Host",
+              "value": "insecure.demo"
+            },
+            {
               "name": "X-Forwarded-Proto",
               "value": "https"
             },
             {
-              "name": "Upgrade-Insecure-Requests",
-              "value": "1"
+              "name": "accept",
+              "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
             },
             {
-              "name": "Sec-Fetch-Site",
-              "value": "same-origin"
-            },
-            {
-              "name": "Sec-Fetch-Mode",
-              "value": "navigate"
-            },
-            {
-              "name": "Sec-Fetch-User",
-              "value": "?1"
-            },
-            {
-              "name": "Connection",
-              "value": "close"
-            },
-            {
-              "name": "Sec-Fetch-Dest",
-              "value": "document"
-            },
-            {
-              "name": "User-Agent",
-              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
-            },
-            {
-              "name": "Accept-Encoding",
+              "name": "accept-encoding",
               "value": "gzip, deflate, br"
             },
             {
-              "name": "Accept-Language",
+              "name": "accept-language",
               "value": "en-GB,en-US;q=0.9,en;q=0.8"
             },
             {
-              "name": "Host",
-              "value": "demo"
+              "name": "cookie",
+              "value": "insecure-demo=1591381073.27228%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
+            },
+            {
+              "name": "referer",
+              "value": "https://insecure.demo/"
+            },
+            {
+              "name": "sec-fetch-dest",
+              "value": "document"
+            },
+            {
+              "name": "sec-fetch-mode",
+              "value": "navigate"
+            },
+            {
+              "name": "sec-fetch-site",
+              "value": "same-origin"
+            },
+            {
+              "name": "sec-fetch-user",
+              "value": "?1"
+            },
+            {
+              "name": "upgrade-insecure-requests",
+              "value": "1"
+            },
+            {
+              "name": "user-agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
             }
           ],
           "queryString": [
@@ -444,20 +444,20 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "Date",
-              "value": "Fri, 05 Jun 2020 18:17:53 GMT"
-            },
-            {
               "name": "Connection",
               "value": "close"
             },
             {
-              "name": "Server",
-              "value": "Perl Dancer2 0.300000"
-            },
-            {
               "name": "Content-Type",
               "value": "text/html; charset=UTF-8"
+            },
+            {
+              "name": "Date",
+              "value": "Fri, 05 Jun 2020 18:17:53 GMT"
+            },
+            {
+              "name": "Server",
+              "value": "Perl Dancer2 0.300000"
             },
             {
               "name": "Set-Cookie",
@@ -513,76 +513,76 @@
               "value": "48"
             },
             {
-              "name": "Cache-Control",
-              "value": "max-age=0"
-            },
-            {
-              "name": "Sec-Fetch-Site",
-              "value": "same-origin"
-            },
-            {
-              "name": "X-Forwarded-Proto",
-              "value": "https"
-            },
-            {
-              "name": "User-Agent",
-              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
-            },
-            {
-              "name": "Sec-Fetch-Mode",
-              "value": "navigate"
-            },
-            {
-              "name": "Accept-Encoding",
-              "value": "gzip, deflate, br"
-            },
-            {
-              "name": "Accept-Language",
-              "value": "en-GB,en-US;q=0.9,en;q=0.8"
-            },
-            {
-              "name": "Cookie",
-              "value": "insecure-demo=1591381073.31311%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
-            },
-            {
-              "name": "X-Forwarded-Host",
-              "value": "insecure.demo"
+              "name": "Host",
+              "value": "demo"
             },
             {
               "name": "X-Forwarded-For",
               "value": "192.168.32.1"
             },
             {
-              "name": "Origin",
-              "value": "https://insecure.demo"
+              "name": "X-Forwarded-Host",
+              "value": "insecure.demo"
             },
             {
-              "name": "Content-Type",
-              "value": "application/x-www-form-urlencoded"
+              "name": "X-Forwarded-Proto",
+              "value": "https"
             },
             {
-              "name": "Accept",
+              "name": "accept",
               "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
             },
             {
-              "name": "Sec-Fetch-User",
-              "value": "?1"
+              "name": "accept-encoding",
+              "value": "gzip, deflate, br"
             },
             {
-              "name": "Sec-Fetch-Dest",
-              "value": "document"
+              "name": "accept-language",
+              "value": "en-GB,en-US;q=0.9,en;q=0.8"
             },
             {
-              "name": "Upgrade-Insecure-Requests",
-              "value": "1"
+              "name": "cache-control",
+              "value": "max-age=0"
             },
             {
-              "name": "Referer",
+              "name": "content-type",
+              "value": "application/x-www-form-urlencoded"
+            },
+            {
+              "name": "cookie",
+              "value": "insecure-demo=1591381073.31311%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
+            },
+            {
+              "name": "origin",
+              "value": "https://insecure.demo"
+            },
+            {
+              "name": "referer",
               "value": "https://insecure.demo/admin/login/?return=%2Fadmin"
             },
             {
-              "name": "Host",
-              "value": "demo"
+              "name": "sec-fetch-dest",
+              "value": "document"
+            },
+            {
+              "name": "sec-fetch-mode",
+              "value": "navigate"
+            },
+            {
+              "name": "sec-fetch-site",
+              "value": "same-origin"
+            },
+            {
+              "name": "sec-fetch-user",
+              "value": "?1"
+            },
+            {
+              "name": "upgrade-insecure-requests",
+              "value": "1"
+            },
+            {
+              "name": "user-agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
             }
           ],
           "queryString": [
@@ -608,16 +608,16 @@
             "text": "SEC=a012bc44ab86be07\u0026username=username\u0026next=Next",
             "params": [
               {
+                "name": "SEC",
+                "value": "a012bc44ab86be07"
+              },
+              {
                 "name": "username",
                 "value": "username"
               },
               {
                 "name": "next",
                 "value": "Next"
-              },
-              {
-                "name": "SEC",
-                "value": "a012bc44ab86be07"
               }
             ]
           }
@@ -628,6 +628,18 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
+              "name": "Connection",
+              "value": "close"
+            },
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=utf-8"
+            },
+            {
+              "name": "Date",
+              "value": "Fri, 05 Jun 2020 18:17:57 GMT"
+            },
+            {
               "name": "Location",
               "value": "http://demo/admin/login/pwd"
             },
@@ -636,24 +648,12 @@
               "value": "Perl Dancer2 0.300000"
             },
             {
-              "name": "Content-Type",
-              "value": "text/html; charset=utf-8"
-            },
-            {
               "name": "Set-Cookie",
               "value": "login=rLXcKqPR79ceJ%2BHcEAzvbDnsw%2F30ejVlsAh0gaGVyivQLnRn2Jr%2BkmREriWiNDS%2FB72mc3FI4Xz8npVfasy8Jml0FK%2FMutwLPgd7jl%2FrlrlLsg%3D%3D; Path=/; Expires=Fri, 05-Jun-2020 20:17:57 GMT; Secure; HttpOnly"
             },
             {
               "name": "Set-Cookie",
               "value": "insecure-demo=1591381077.51434%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:17:57 GMT; secure; HttpOnly"
-            },
-            {
-              "name": "Date",
-              "value": "Fri, 05 Jun 2020 18:17:57 GMT"
-            },
-            {
-              "name": "Connection",
-              "value": "close"
             }
           ],
           "cookies": [
@@ -704,72 +704,72 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "X-Forwarded-Host",
-              "value": "insecure.demo"
-            },
-            {
-              "name": "Cache-Control",
-              "value": "max-age=0"
-            },
-            {
-              "name": "Upgrade-Insecure-Requests",
-              "value": "1"
-            },
-            {
-              "name": "Sec-Fetch-Site",
-              "value": "same-origin"
-            },
-            {
-              "name": "Sec-Fetch-User",
-              "value": "?1"
-            },
-            {
-              "name": "Referer",
-              "value": "https://insecure.demo/admin/login/?return=%2Fadmin"
-            },
-            {
-              "name": "Accept-Encoding",
-              "value": "gzip, deflate, br"
-            },
-            {
-              "name": "Cookie",
-              "value": "login=rLXcKqPR79ceJ%2BHcEAzvbDnsw%2F30ejVlsAh0gaGVyivQLnRn2Jr%2BkmREriWiNDS%2FB72mc3FI4Xz8npVfasy8Jml0FK%2FMutwLPgd7jl%2FrlrlLsg%3D%3D; insecure-demo=1591381077.51434%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
-            },
-            {
-              "name": "X-Forwarded-Proto",
-              "value": "https"
-            },
-            {
-              "name": "User-Agent",
-              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
-            },
-            {
-              "name": "Sec-Fetch-Mode",
-              "value": "navigate"
-            },
-            {
               "name": "Connection",
               "value": "close"
             },
             {
-              "name": "Sec-Fetch-Dest",
-              "value": "document"
-            },
-            {
-              "name": "Accept-Language",
-              "value": "en-GB,en-US;q=0.9,en;q=0.8"
+              "name": "Host",
+              "value": "demo"
             },
             {
               "name": "X-Forwarded-For",
               "value": "192.168.32.1"
             },
             {
-              "name": "Accept",
+              "name": "X-Forwarded-Host",
+              "value": "insecure.demo"
+            },
+            {
+              "name": "X-Forwarded-Proto",
+              "value": "https"
+            },
+            {
+              "name": "accept",
               "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
             },
             {
-              "name": "Host",
-              "value": "demo"
+              "name": "accept-encoding",
+              "value": "gzip, deflate, br"
+            },
+            {
+              "name": "accept-language",
+              "value": "en-GB,en-US;q=0.9,en;q=0.8"
+            },
+            {
+              "name": "cache-control",
+              "value": "max-age=0"
+            },
+            {
+              "name": "cookie",
+              "value": "login=rLXcKqPR79ceJ%2BHcEAzvbDnsw%2F30ejVlsAh0gaGVyivQLnRn2Jr%2BkmREriWiNDS%2FB72mc3FI4Xz8npVfasy8Jml0FK%2FMutwLPgd7jl%2FrlrlLsg%3D%3D; insecure-demo=1591381077.51434%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
+            },
+            {
+              "name": "referer",
+              "value": "https://insecure.demo/admin/login/?return=%2Fadmin"
+            },
+            {
+              "name": "sec-fetch-dest",
+              "value": "document"
+            },
+            {
+              "name": "sec-fetch-mode",
+              "value": "navigate"
+            },
+            {
+              "name": "sec-fetch-site",
+              "value": "same-origin"
+            },
+            {
+              "name": "sec-fetch-user",
+              "value": "?1"
+            },
+            {
+              "name": "upgrade-insecure-requests",
+              "value": "1"
+            },
+            {
+              "name": "user-agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
             }
           ],
           "queryString": null,
@@ -807,20 +807,20 @@
               "value": "close"
             },
             {
-              "name": "Server",
-              "value": "Perl Dancer2 0.300000"
-            },
-            {
               "name": "Content-Type",
               "value": "text/html; charset=UTF-8"
             },
             {
-              "name": "Set-Cookie",
-              "value": "insecure-demo=1591381078.5142%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:17:58 GMT; secure; HttpOnly"
-            },
-            {
               "name": "Date",
               "value": "Fri, 05 Jun 2020 18:17:58 GMT"
+            },
+            {
+              "name": "Server",
+              "value": "Perl Dancer2 0.300000"
+            },
+            {
+              "name": "Set-Cookie",
+              "value": "insecure-demo=1591381078.5142%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:17:58 GMT; secure; HttpOnly"
             }
           ],
           "cookies": [
@@ -864,84 +864,84 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "X-Forwarded-Proto",
-              "value": "https"
+              "name": "Connection",
+              "value": "close"
             },
             {
               "name": "Content-Length",
               "value": "48"
             },
             {
-              "name": "Cache-Control",
-              "value": "max-age=0"
-            },
-            {
-              "name": "Origin",
-              "value": "https://insecure.demo"
-            },
-            {
-              "name": "Sec-Fetch-Site",
-              "value": "same-origin"
-            },
-            {
-              "name": "X-Forwarded-Host",
-              "value": "insecure.demo"
-            },
-            {
-              "name": "Content-Type",
-              "value": "application/x-www-form-urlencoded"
-            },
-            {
-              "name": "Sec-Fetch-User",
-              "value": "?1"
-            },
-            {
-              "name": "Referer",
-              "value": "https://insecure.demo/admin/login/pwd"
+              "name": "Host",
+              "value": "demo"
             },
             {
               "name": "X-Forwarded-For",
               "value": "192.168.32.1"
             },
             {
-              "name": "Upgrade-Insecure-Requests",
-              "value": "1"
+              "name": "X-Forwarded-Host",
+              "value": "insecure.demo"
             },
             {
-              "name": "User-Agent",
-              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
+              "name": "X-Forwarded-Proto",
+              "value": "https"
             },
             {
-              "name": "Accept",
+              "name": "accept",
               "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
             },
             {
-              "name": "Sec-Fetch-Dest",
-              "value": "document"
-            },
-            {
-              "name": "Accept-Language",
-              "value": "en-GB,en-US;q=0.9,en;q=0.8"
-            },
-            {
-              "name": "Cookie",
-              "value": "login=rLXcKqPR79ceJ%2BHcEAzvbDnsw%2F30ejVlsAh0gaGVyivQLnRn2Jr%2BkmREriWiNDS%2FB72mc3FI4Xz8npVfasy8Jml0FK%2FMutwLPgd7jl%2FrlrlLsg%3D%3D; insecure-demo=1591381078.5142%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
-            },
-            {
-              "name": "Connection",
-              "value": "close"
-            },
-            {
-              "name": "Sec-Fetch-Mode",
-              "value": "navigate"
-            },
-            {
-              "name": "Accept-Encoding",
+              "name": "accept-encoding",
               "value": "gzip, deflate, br"
             },
             {
-              "name": "Host",
-              "value": "demo"
+              "name": "accept-language",
+              "value": "en-GB,en-US;q=0.9,en;q=0.8"
+            },
+            {
+              "name": "cache-control",
+              "value": "max-age=0"
+            },
+            {
+              "name": "content-type",
+              "value": "application/x-www-form-urlencoded"
+            },
+            {
+              "name": "cookie",
+              "value": "login=rLXcKqPR79ceJ%2BHcEAzvbDnsw%2F30ejVlsAh0gaGVyivQLnRn2Jr%2BkmREriWiNDS%2FB72mc3FI4Xz8npVfasy8Jml0FK%2FMutwLPgd7jl%2FrlrlLsg%3D%3D; insecure-demo=1591381078.5142%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
+            },
+            {
+              "name": "origin",
+              "value": "https://insecure.demo"
+            },
+            {
+              "name": "referer",
+              "value": "https://insecure.demo/admin/login/pwd"
+            },
+            {
+              "name": "sec-fetch-dest",
+              "value": "document"
+            },
+            {
+              "name": "sec-fetch-mode",
+              "value": "navigate"
+            },
+            {
+              "name": "sec-fetch-site",
+              "value": "same-origin"
+            },
+            {
+              "name": "sec-fetch-user",
+              "value": "?1"
+            },
+            {
+              "name": "upgrade-insecure-requests",
+              "value": "1"
+            },
+            {
+              "name": "user-agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
             }
           ],
           "queryString": null,
@@ -989,24 +989,16 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "Set-Cookie",
-              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; Path=/; Expires=Sat, 06-Jun-2020 02:18:01 GMT; Secure; HttpOnly"
+              "name": "Connection",
+              "value": "close"
             },
             {
-              "name": "Set-Cookie",
-              "value": "login=; Path=/; Expires=Thu, 04-Jun-2020 18:18:01 GMT; HttpOnly"
-            },
-            {
-              "name": "Set-Cookie",
-              "value": "insecure-demo=1591381081.61964%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:18:01 GMT; secure; HttpOnly"
+              "name": "Content-Type",
+              "value": "text/html; charset=utf-8"
             },
             {
               "name": "Date",
               "value": "Fri, 05 Jun 2020 18:18:01 GMT"
-            },
-            {
-              "name": "Connection",
-              "value": "close"
             },
             {
               "name": "Location",
@@ -1017,8 +1009,16 @@
               "value": "Perl Dancer2 0.300000"
             },
             {
-              "name": "Content-Type",
-              "value": "text/html; charset=utf-8"
+              "name": "Set-Cookie",
+              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; Path=/; Expires=Sat, 06-Jun-2020 02:18:01 GMT; Secure; HttpOnly"
+            },
+            {
+              "name": "Set-Cookie",
+              "value": "login=; Path=/; Expires=Thu, 04-Jun-2020 18:18:01 GMT; HttpOnly"
+            },
+            {
+              "name": "Set-Cookie",
+              "value": "insecure-demo=1591381081.61964%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:18:01 GMT; secure; HttpOnly"
             }
           ],
           "cookies": [
@@ -1076,72 +1076,72 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "Sec-Fetch-Mode",
-              "value": "navigate"
+              "name": "Connection",
+              "value": "close"
             },
             {
-              "name": "Sec-Fetch-User",
-              "value": "?1"
-            },
-            {
-              "name": "Cookie",
-              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381081.61964%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
-            },
-            {
-              "name": "X-Forwarded-Host",
-              "value": "insecure.demo"
+              "name": "Host",
+              "value": "demo"
             },
             {
               "name": "X-Forwarded-For",
               "value": "192.168.32.1"
             },
             {
-              "name": "Cache-Control",
-              "value": "max-age=0"
-            },
-            {
-              "name": "User-Agent",
-              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
-            },
-            {
-              "name": "Referer",
-              "value": "https://insecure.demo/admin/login/pwd"
-            },
-            {
-              "name": "Accept-Encoding",
-              "value": "gzip, deflate, br"
+              "name": "X-Forwarded-Host",
+              "value": "insecure.demo"
             },
             {
               "name": "X-Forwarded-Proto",
               "value": "https"
             },
             {
-              "name": "Connection",
-              "value": "close"
-            },
-            {
-              "name": "Upgrade-Insecure-Requests",
-              "value": "1"
-            },
-            {
-              "name": "Sec-Fetch-Site",
-              "value": "same-origin"
-            },
-            {
-              "name": "Sec-Fetch-Dest",
-              "value": "document"
-            },
-            {
-              "name": "Accept-Language",
-              "value": "en-GB,en-US;q=0.9,en;q=0.8"
-            },
-            {
-              "name": "Accept",
+              "name": "accept",
               "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
             },
             {
-              "name": "Host",
-              "value": "demo"
+              "name": "accept-encoding",
+              "value": "gzip, deflate, br"
+            },
+            {
+              "name": "accept-language",
+              "value": "en-GB,en-US;q=0.9,en;q=0.8"
+            },
+            {
+              "name": "cache-control",
+              "value": "max-age=0"
+            },
+            {
+              "name": "cookie",
+              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381081.61964%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
+            },
+            {
+              "name": "referer",
+              "value": "https://insecure.demo/admin/login/pwd"
+            },
+            {
+              "name": "sec-fetch-dest",
+              "value": "document"
+            },
+            {
+              "name": "sec-fetch-mode",
+              "value": "navigate"
+            },
+            {
+              "name": "sec-fetch-site",
+              "value": "same-origin"
+            },
+            {
+              "name": "sec-fetch-user",
+              "value": "?1"
+            },
+            {
+              "name": "upgrade-insecure-requests",
+              "value": "1"
+            },
+            {
+              "name": "user-agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
             }
           ],
           "queryString": null,
@@ -1175,28 +1175,28 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
+              "name": "Connection",
+              "value": "close"
+            },
+            {
               "name": "Content-Type",
               "value": "text/html; charset=UTF-8"
-            },
-            {
-              "name": "X-User",
-              "value": "admin/username"
-            },
-            {
-              "name": "Set-Cookie",
-              "value": "insecure-demo=1591381081.93768%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:18:01 GMT; secure; HttpOnly"
             },
             {
               "name": "Date",
               "value": "Fri, 05 Jun 2020 18:18:01 GMT"
             },
             {
-              "name": "Connection",
-              "value": "close"
-            },
-            {
               "name": "Server",
               "value": "Perl Dancer2 0.300000"
+            },
+            {
+              "name": "Set-Cookie",
+              "value": "insecure-demo=1591381081.93768%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:18:01 GMT; secure; HttpOnly"
+            },
+            {
+              "name": "X-User",
+              "value": "admin/username"
             }
           ],
           "cookies": [
@@ -1240,6 +1240,18 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
+              "name": "Connection",
+              "value": "close"
+            },
+            {
+              "name": "Host",
+              "value": "demo"
+            },
+            {
+              "name": "X-Forwarded-For",
+              "value": "192.168.32.1"
+            },
+            {
               "name": "X-Forwarded-Host",
               "value": "insecure.demo"
             },
@@ -1248,60 +1260,48 @@
               "value": "https"
             },
             {
-              "name": "Sec-Fetch-Mode",
-              "value": "navigate"
-            },
-            {
-              "name": "Sec-Fetch-User",
-              "value": "?1"
-            },
-            {
-              "name": "User-Agent",
-              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
-            },
-            {
-              "name": "Sec-Fetch-Site",
-              "value": "same-origin"
-            },
-            {
-              "name": "Sec-Fetch-Dest",
-              "value": "document"
-            },
-            {
-              "name": "Accept-Encoding",
-              "value": "gzip, deflate, br"
-            },
-            {
-              "name": "Accept-Language",
-              "value": "en-GB,en-US;q=0.9,en;q=0.8"
-            },
-            {
-              "name": "Connection",
-              "value": "close"
-            },
-            {
-              "name": "Referer",
-              "value": "https://insecure.demo/admin"
-            },
-            {
-              "name": "X-Forwarded-For",
-              "value": "192.168.32.1"
-            },
-            {
-              "name": "Upgrade-Insecure-Requests",
-              "value": "1"
-            },
-            {
-              "name": "Accept",
+              "name": "accept",
               "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
             },
             {
-              "name": "Cookie",
+              "name": "accept-encoding",
+              "value": "gzip, deflate, br"
+            },
+            {
+              "name": "accept-language",
+              "value": "en-GB,en-US;q=0.9,en;q=0.8"
+            },
+            {
+              "name": "cookie",
               "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381081.93768%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
             },
             {
-              "name": "Host",
-              "value": "demo"
+              "name": "referer",
+              "value": "https://insecure.demo/admin"
+            },
+            {
+              "name": "sec-fetch-dest",
+              "value": "document"
+            },
+            {
+              "name": "sec-fetch-mode",
+              "value": "navigate"
+            },
+            {
+              "name": "sec-fetch-site",
+              "value": "same-origin"
+            },
+            {
+              "name": "sec-fetch-user",
+              "value": "?1"
+            },
+            {
+              "name": "upgrade-insecure-requests",
+              "value": "1"
+            },
+            {
+              "name": "user-agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
             }
           ],
           "queryString": null,
@@ -1339,24 +1339,24 @@
               "value": "close"
             },
             {
-              "name": "Server",
-              "value": "Perl Dancer2 0.300000"
-            },
-            {
               "name": "Content-Type",
               "value": "text/html; charset=UTF-8"
             },
             {
-              "name": "X-User",
-              "value": "admin/username"
+              "name": "Date",
+              "value": "Fri, 05 Jun 2020 18:18:03 GMT"
+            },
+            {
+              "name": "Server",
+              "value": "Perl Dancer2 0.300000"
             },
             {
               "name": "Set-Cookie",
               "value": "insecure-demo=1591381083.32857%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:18:03 GMT; secure; HttpOnly"
             },
             {
-              "name": "Date",
-              "value": "Fri, 05 Jun 2020 18:18:03 GMT"
+              "name": "X-User",
+              "value": "admin/username"
             }
           ],
           "cookies": [
@@ -1400,68 +1400,68 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
+              "name": "Connection",
+              "value": "close"
+            },
+            {
+              "name": "Host",
+              "value": "demo"
+            },
+            {
               "name": "X-Forwarded-For",
               "value": "192.168.32.1"
-            },
-            {
-              "name": "Upgrade-Insecure-Requests",
-              "value": "1"
-            },
-            {
-              "name": "Sec-Fetch-Mode",
-              "value": "navigate"
-            },
-            {
-              "name": "Sec-Fetch-User",
-              "value": "?1"
-            },
-            {
-              "name": "Referer",
-              "value": "https://insecure.demo/admin/users"
-            },
-            {
-              "name": "User-Agent",
-              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
-            },
-            {
-              "name": "Sec-Fetch-Site",
-              "value": "same-origin"
-            },
-            {
-              "name": "Accept-Encoding",
-              "value": "gzip, deflate, br"
-            },
-            {
-              "name": "X-Forwarded-Proto",
-              "value": "https"
-            },
-            {
-              "name": "Accept-Language",
-              "value": "en-GB,en-US;q=0.9,en;q=0.8"
-            },
-            {
-              "name": "Cookie",
-              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381083.32857%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
             },
             {
               "name": "X-Forwarded-Host",
               "value": "insecure.demo"
             },
             {
-              "name": "Connection",
-              "value": "close"
+              "name": "X-Forwarded-Proto",
+              "value": "https"
             },
             {
-              "name": "Accept",
+              "name": "accept",
               "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
             },
             {
-              "name": "Sec-Fetch-Dest",
+              "name": "accept-encoding",
+              "value": "gzip, deflate, br"
+            },
+            {
+              "name": "accept-language",
+              "value": "en-GB,en-US;q=0.9,en;q=0.8"
+            },
+            {
+              "name": "cookie",
+              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381083.32857%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
+            },
+            {
+              "name": "referer",
+              "value": "https://insecure.demo/admin/users"
+            },
+            {
+              "name": "sec-fetch-dest",
               "value": "document"
             },
             {
-              "name": "Host",
-              "value": "demo"
+              "name": "sec-fetch-mode",
+              "value": "navigate"
+            },
+            {
+              "name": "sec-fetch-site",
+              "value": "same-origin"
+            },
+            {
+              "name": "sec-fetch-user",
+              "value": "?1"
+            },
+            {
+              "name": "upgrade-insecure-requests",
+              "value": "1"
+            },
+            {
+              "name": "user-agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
             }
           ],
           "queryString": [
@@ -1500,24 +1500,24 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
+              "name": "Connection",
+              "value": "close"
+            },
+            {
               "name": "Content-Type",
               "value": "text/html; charset=ISO-8859-1"
-            },
-            {
-              "name": "X-User",
-              "value": "admin/username"
-            },
-            {
-              "name": "Set-Cookie",
-              "value": "insecure-demo=1591381086.50373%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:18:06 GMT; secure; HttpOnly"
             },
             {
               "name": "Date",
               "value": "Fri, 05 Jun 2020 18:18:06 GMT"
             },
             {
-              "name": "Connection",
-              "value": "close"
+              "name": "Set-Cookie",
+              "value": "insecure-demo=1591381086.50373%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:18:06 GMT; secure; HttpOnly"
+            },
+            {
+              "name": "X-User",
+              "value": "admin/username"
             }
           ],
           "cookies": [
@@ -1561,68 +1561,68 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "X-Forwarded-Proto",
-              "value": "https"
-            },
-            {
               "name": "Connection",
               "value": "close"
             },
             {
-              "name": "Accept",
-              "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
-            },
-            {
-              "name": "Sec-Fetch-Mode",
-              "value": "navigate"
-            },
-            {
-              "name": "Accept-Encoding",
-              "value": "gzip, deflate, br"
-            },
-            {
-              "name": "Sec-Fetch-Site",
-              "value": "same-origin"
-            },
-            {
-              "name": "Referer",
-              "value": "https://insecure.demo/admin"
-            },
-            {
-              "name": "X-Forwarded-Host",
-              "value": "insecure.demo"
-            },
-            {
-              "name": "User-Agent",
-              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
-            },
-            {
-              "name": "Accept-Language",
-              "value": "en-GB,en-US;q=0.9,en;q=0.8"
-            },
-            {
-              "name": "Cookie",
-              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381086.50373%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
+              "name": "Host",
+              "value": "demo"
             },
             {
               "name": "X-Forwarded-For",
               "value": "192.168.32.1"
             },
             {
-              "name": "Upgrade-Insecure-Requests",
-              "value": "1"
+              "name": "X-Forwarded-Host",
+              "value": "insecure.demo"
             },
             {
-              "name": "Sec-Fetch-User",
-              "value": "?1"
+              "name": "X-Forwarded-Proto",
+              "value": "https"
             },
             {
-              "name": "Sec-Fetch-Dest",
+              "name": "accept",
+              "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+            },
+            {
+              "name": "accept-encoding",
+              "value": "gzip, deflate, br"
+            },
+            {
+              "name": "accept-language",
+              "value": "en-GB,en-US;q=0.9,en;q=0.8"
+            },
+            {
+              "name": "cookie",
+              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381086.50373%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
+            },
+            {
+              "name": "referer",
+              "value": "https://insecure.demo/admin"
+            },
+            {
+              "name": "sec-fetch-dest",
               "value": "document"
             },
             {
-              "name": "Host",
-              "value": "demo"
+              "name": "sec-fetch-mode",
+              "value": "navigate"
+            },
+            {
+              "name": "sec-fetch-site",
+              "value": "same-origin"
+            },
+            {
+              "name": "sec-fetch-user",
+              "value": "?1"
+            },
+            {
+              "name": "upgrade-insecure-requests",
+              "value": "1"
+            },
+            {
+              "name": "user-agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
             }
           ],
           "queryString": null,
@@ -1656,24 +1656,24 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "X-User",
-              "value": "admin/username"
-            },
-            {
-              "name": "Set-Cookie",
-              "value": "insecure-demo=1591381099.4084%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:18:19 GMT; secure; HttpOnly"
-            },
-            {
-              "name": "Date",
-              "value": "Fri, 05 Jun 2020 18:18:19 GMT"
-            },
-            {
               "name": "Connection",
               "value": "close"
             },
             {
               "name": "Content-Type",
               "value": "text/html; charset=ISO-8859-1"
+            },
+            {
+              "name": "Date",
+              "value": "Fri, 05 Jun 2020 18:18:19 GMT"
+            },
+            {
+              "name": "Set-Cookie",
+              "value": "insecure-demo=1591381099.4084%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:18:19 GMT; secure; HttpOnly"
+            },
+            {
+              "name": "X-User",
+              "value": "admin/username"
             }
           ],
           "cookies": [
@@ -1717,68 +1717,68 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "X-Forwarded-Host",
-              "value": "insecure.demo"
-            },
-            {
-              "name": "Upgrade-Insecure-Requests",
-              "value": "1"
-            },
-            {
-              "name": "User-Agent",
-              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
-            },
-            {
               "name": "Connection",
               "value": "close"
             },
             {
-              "name": "Sec-Fetch-Site",
-              "value": "same-origin"
-            },
-            {
-              "name": "Sec-Fetch-Mode",
-              "value": "navigate"
-            },
-            {
-              "name": "Referer",
-              "value": "https://insecure.demo/admin"
-            },
-            {
-              "name": "Accept-Language",
-              "value": "en-GB,en-US;q=0.9,en;q=0.8"
+              "name": "Host",
+              "value": "demo"
             },
             {
               "name": "X-Forwarded-For",
               "value": "192.168.32.1"
             },
             {
+              "name": "X-Forwarded-Host",
+              "value": "insecure.demo"
+            },
+            {
               "name": "X-Forwarded-Proto",
               "value": "https"
             },
             {
-              "name": "Accept",
+              "name": "accept",
               "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
             },
             {
-              "name": "Sec-Fetch-User",
-              "value": "?1"
-            },
-            {
-              "name": "Cookie",
-              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381099.4084%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
-            },
-            {
-              "name": "Sec-Fetch-Dest",
-              "value": "document"
-            },
-            {
-              "name": "Accept-Encoding",
+              "name": "accept-encoding",
               "value": "gzip, deflate, br"
             },
             {
-              "name": "Host",
-              "value": "demo"
+              "name": "accept-language",
+              "value": "en-GB,en-US;q=0.9,en;q=0.8"
+            },
+            {
+              "name": "cookie",
+              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381099.4084%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
+            },
+            {
+              "name": "referer",
+              "value": "https://insecure.demo/admin"
+            },
+            {
+              "name": "sec-fetch-dest",
+              "value": "document"
+            },
+            {
+              "name": "sec-fetch-mode",
+              "value": "navigate"
+            },
+            {
+              "name": "sec-fetch-site",
+              "value": "same-origin"
+            },
+            {
+              "name": "sec-fetch-user",
+              "value": "?1"
+            },
+            {
+              "name": "upgrade-insecure-requests",
+              "value": "1"
+            },
+            {
+              "name": "user-agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
             }
           ],
           "queryString": [
@@ -1817,24 +1817,24 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "X-User",
-              "value": "admin/username"
-            },
-            {
-              "name": "Set-Cookie",
-              "value": "insecure-demo=1591381102.59204%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:18:22 GMT; secure; HttpOnly"
-            },
-            {
-              "name": "Date",
-              "value": "Fri, 05 Jun 2020 18:18:22 GMT"
-            },
-            {
               "name": "Connection",
               "value": "close"
             },
             {
               "name": "Content-Type",
               "value": "text/html; charset=ISO-8859-1"
+            },
+            {
+              "name": "Date",
+              "value": "Fri, 05 Jun 2020 18:18:22 GMT"
+            },
+            {
+              "name": "Set-Cookie",
+              "value": "insecure-demo=1591381102.59204%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:18:22 GMT; secure; HttpOnly"
+            },
+            {
+              "name": "X-User",
+              "value": "admin/username"
             }
           ],
           "cookies": [
@@ -1878,68 +1878,68 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "Cookie",
-              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381102.59204%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
+              "name": "Connection",
+              "value": "close"
             },
             {
-              "name": "User-Agent",
-              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
-            },
-            {
-              "name": "Sec-Fetch-Mode",
-              "value": "navigate"
+              "name": "Host",
+              "value": "demo"
             },
             {
               "name": "X-Forwarded-For",
               "value": "192.168.32.1"
             },
             {
-              "name": "X-Forwarded-Proto",
-              "value": "https"
-            },
-            {
-              "name": "Connection",
-              "value": "close"
-            },
-            {
-              "name": "Accept",
-              "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
-            },
-            {
-              "name": "Sec-Fetch-Site",
-              "value": "same-origin"
-            },
-            {
-              "name": "Sec-Fetch-User",
-              "value": "?1"
-            },
-            {
-              "name": "Referer",
-              "value": "https://insecure.demo/admin"
-            },
-            {
-              "name": "Accept-Language",
-              "value": "en-GB,en-US;q=0.9,en;q=0.8"
-            },
-            {
               "name": "X-Forwarded-Host",
               "value": "insecure.demo"
             },
             {
-              "name": "Upgrade-Insecure-Requests",
-              "value": "1"
+              "name": "X-Forwarded-Proto",
+              "value": "https"
             },
             {
-              "name": "Sec-Fetch-Dest",
-              "value": "document"
+              "name": "accept",
+              "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
             },
             {
-              "name": "Accept-Encoding",
+              "name": "accept-encoding",
               "value": "gzip, deflate, br"
             },
             {
-              "name": "Host",
-              "value": "demo"
+              "name": "accept-language",
+              "value": "en-GB,en-US;q=0.9,en;q=0.8"
+            },
+            {
+              "name": "cookie",
+              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381102.59204%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
+            },
+            {
+              "name": "referer",
+              "value": "https://insecure.demo/admin"
+            },
+            {
+              "name": "sec-fetch-dest",
+              "value": "document"
+            },
+            {
+              "name": "sec-fetch-mode",
+              "value": "navigate"
+            },
+            {
+              "name": "sec-fetch-site",
+              "value": "same-origin"
+            },
+            {
+              "name": "sec-fetch-user",
+              "value": "?1"
+            },
+            {
+              "name": "upgrade-insecure-requests",
+              "value": "1"
+            },
+            {
+              "name": "user-agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
             }
           ],
           "queryString": null,
@@ -1973,28 +1973,28 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "Server",
-              "value": "Perl Dancer2 0.300000"
+              "name": "Connection",
+              "value": "close"
             },
             {
               "name": "Content-Type",
               "value": "text/html; charset=UTF-8"
             },
             {
-              "name": "X-User",
-              "value": "admin/username"
+              "name": "Date",
+              "value": "Fri, 05 Jun 2020 18:18:26 GMT"
+            },
+            {
+              "name": "Server",
+              "value": "Perl Dancer2 0.300000"
             },
             {
               "name": "Set-Cookie",
               "value": "insecure-demo=1591381106.21688%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:18:26 GMT; secure; HttpOnly"
             },
             {
-              "name": "Date",
-              "value": "Fri, 05 Jun 2020 18:18:26 GMT"
-            },
-            {
-              "name": "Connection",
-              "value": "close"
+              "name": "X-User",
+              "value": "admin/username"
             }
           ],
           "cookies": [
@@ -2038,46 +2038,6 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "Content-Type",
-              "value": "application/x-www-form-urlencoded"
-            },
-            {
-              "name": "User-Agent",
-              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
-            },
-            {
-              "name": "Accept",
-              "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
-            },
-            {
-              "name": "Accept-Encoding",
-              "value": "gzip, deflate, br"
-            },
-            {
-              "name": "X-Forwarded-For",
-              "value": "192.168.32.1"
-            },
-            {
-              "name": "Cache-Control",
-              "value": "max-age=0"
-            },
-            {
-              "name": "Sec-Fetch-User",
-              "value": "?1"
-            },
-            {
-              "name": "Accept-Language",
-              "value": "en-GB,en-US;q=0.9,en;q=0.8"
-            },
-            {
-              "name": "Cookie",
-              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381106.21688%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
-            },
-            {
-              "name": "X-Forwarded-Proto",
-              "value": "https"
-            },
-            {
               "name": "Connection",
               "value": "close"
             },
@@ -2086,36 +2046,76 @@
               "value": "32"
             },
             {
-              "name": "Upgrade-Insecure-Requests",
-              "value": "1"
+              "name": "Host",
+              "value": "demo"
             },
             {
-              "name": "Sec-Fetch-Site",
-              "value": "same-origin"
-            },
-            {
-              "name": "Sec-Fetch-Mode",
-              "value": "navigate"
-            },
-            {
-              "name": "Referer",
-              "value": "https://insecure.demo/admin/number-check"
+              "name": "X-Forwarded-For",
+              "value": "192.168.32.1"
             },
             {
               "name": "X-Forwarded-Host",
               "value": "insecure.demo"
             },
             {
-              "name": "Origin",
+              "name": "X-Forwarded-Proto",
+              "value": "https"
+            },
+            {
+              "name": "accept",
+              "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+            },
+            {
+              "name": "accept-encoding",
+              "value": "gzip, deflate, br"
+            },
+            {
+              "name": "accept-language",
+              "value": "en-GB,en-US;q=0.9,en;q=0.8"
+            },
+            {
+              "name": "cache-control",
+              "value": "max-age=0"
+            },
+            {
+              "name": "content-type",
+              "value": "application/x-www-form-urlencoded"
+            },
+            {
+              "name": "cookie",
+              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381106.21688%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
+            },
+            {
+              "name": "origin",
               "value": "https://insecure.demo"
             },
             {
-              "name": "Sec-Fetch-Dest",
+              "name": "referer",
+              "value": "https://insecure.demo/admin/number-check"
+            },
+            {
+              "name": "sec-fetch-dest",
               "value": "document"
             },
             {
-              "name": "Host",
-              "value": "demo"
+              "name": "sec-fetch-mode",
+              "value": "navigate"
+            },
+            {
+              "name": "sec-fetch-site",
+              "value": "same-origin"
+            },
+            {
+              "name": "sec-fetch-user",
+              "value": "?1"
+            },
+            {
+              "name": "upgrade-insecure-requests",
+              "value": "1"
+            },
+            {
+              "name": "user-agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
             }
           ],
           "queryString": null,
@@ -2143,12 +2143,12 @@
             "text": "SEC=a012bc44ab86be07\u0026number=3213",
             "params": [
               {
-                "name": "number",
-                "value": "3213"
-              },
-              {
                 "name": "SEC",
                 "value": "a012bc44ab86be07"
+              },
+              {
+                "name": "number",
+                "value": "3213"
               }
             ]
           }
@@ -2159,28 +2159,28 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "Server",
-              "value": "Perl Dancer2 0.300000"
+              "name": "Connection",
+              "value": "close"
             },
             {
               "name": "Content-Type",
               "value": "text/html; charset=UTF-8"
             },
             {
-              "name": "X-User",
-              "value": "admin/username"
+              "name": "Date",
+              "value": "Fri, 05 Jun 2020 18:18:28 GMT"
+            },
+            {
+              "name": "Server",
+              "value": "Perl Dancer2 0.300000"
             },
             {
               "name": "Set-Cookie",
               "value": "insecure-demo=1591381108.23391%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:18:28 GMT; secure; HttpOnly"
             },
             {
-              "name": "Date",
-              "value": "Fri, 05 Jun 2020 18:18:28 GMT"
-            },
-            {
-              "name": "Connection",
-              "value": "close"
+              "name": "X-User",
+              "value": "admin/username"
             }
           ],
           "cookies": [
@@ -2224,54 +2224,6 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "X-Forwarded-Proto",
-              "value": "https"
-            },
-            {
-              "name": "Upgrade-Insecure-Requests",
-              "value": "1"
-            },
-            {
-              "name": "Content-Type",
-              "value": "application/x-www-form-urlencoded"
-            },
-            {
-              "name": "User-Agent",
-              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
-            },
-            {
-              "name": "Accept-Encoding",
-              "value": "gzip, deflate, br"
-            },
-            {
-              "name": "Sec-Fetch-Site",
-              "value": "same-origin"
-            },
-            {
-              "name": "Sec-Fetch-User",
-              "value": "?1"
-            },
-            {
-              "name": "Cookie",
-              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381108.23391%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
-            },
-            {
-              "name": "X-Forwarded-For",
-              "value": "192.168.32.1"
-            },
-            {
-              "name": "Origin",
-              "value": "https://insecure.demo"
-            },
-            {
-              "name": "Accept",
-              "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
-            },
-            {
-              "name": "X-Forwarded-Host",
-              "value": "insecure.demo"
-            },
-            {
               "name": "Connection",
               "value": "close"
             },
@@ -2280,28 +2232,76 @@
               "value": "32"
             },
             {
-              "name": "Cache-Control",
-              "value": "max-age=0"
+              "name": "Host",
+              "value": "demo"
             },
             {
-              "name": "Sec-Fetch-Mode",
-              "value": "navigate"
+              "name": "X-Forwarded-For",
+              "value": "192.168.32.1"
             },
             {
-              "name": "Sec-Fetch-Dest",
-              "value": "document"
+              "name": "X-Forwarded-Host",
+              "value": "insecure.demo"
             },
             {
-              "name": "Referer",
-              "value": "https://insecure.demo/admin/number-check"
+              "name": "X-Forwarded-Proto",
+              "value": "https"
             },
             {
-              "name": "Accept-Language",
+              "name": "accept",
+              "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+            },
+            {
+              "name": "accept-encoding",
+              "value": "gzip, deflate, br"
+            },
+            {
+              "name": "accept-language",
               "value": "en-GB,en-US;q=0.9,en;q=0.8"
             },
             {
-              "name": "Host",
-              "value": "demo"
+              "name": "cache-control",
+              "value": "max-age=0"
+            },
+            {
+              "name": "content-type",
+              "value": "application/x-www-form-urlencoded"
+            },
+            {
+              "name": "cookie",
+              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381108.23391%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
+            },
+            {
+              "name": "origin",
+              "value": "https://insecure.demo"
+            },
+            {
+              "name": "referer",
+              "value": "https://insecure.demo/admin/number-check"
+            },
+            {
+              "name": "sec-fetch-dest",
+              "value": "document"
+            },
+            {
+              "name": "sec-fetch-mode",
+              "value": "navigate"
+            },
+            {
+              "name": "sec-fetch-site",
+              "value": "same-origin"
+            },
+            {
+              "name": "sec-fetch-user",
+              "value": "?1"
+            },
+            {
+              "name": "upgrade-insecure-requests",
+              "value": "1"
+            },
+            {
+              "name": "user-agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
             }
           ],
           "queryString": null,
@@ -2345,28 +2345,28 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
+              "name": "Connection",
+              "value": "close"
+            },
+            {
               "name": "Content-Type",
               "value": "text/html; charset=UTF-8"
-            },
-            {
-              "name": "X-User",
-              "value": "admin/username"
-            },
-            {
-              "name": "Set-Cookie",
-              "value": "insecure-demo=1591381109.4942%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:18:29 GMT; secure; HttpOnly"
             },
             {
               "name": "Date",
               "value": "Fri, 05 Jun 2020 18:18:29 GMT"
             },
             {
-              "name": "Connection",
-              "value": "close"
-            },
-            {
               "name": "Server",
               "value": "Perl Dancer2 0.300000"
+            },
+            {
+              "name": "Set-Cookie",
+              "value": "insecure-demo=1591381109.4942%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:18:29 GMT; secure; HttpOnly"
+            },
+            {
+              "name": "X-User",
+              "value": "admin/username"
             }
           ],
           "cookies": [
@@ -2410,64 +2410,64 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "Sec-Fetch-Site",
-              "value": "same-origin"
-            },
-            {
-              "name": "Referer",
-              "value": "https://insecure.demo/admin"
-            },
-            {
-              "name": "Accept-Encoding",
-              "value": "gzip, deflate, br"
-            },
-            {
-              "name": "Accept-Language",
-              "value": "en-GB,en-US;q=0.9,en;q=0.8"
-            },
-            {
-              "name": "X-Forwarded-Host",
-              "value": "insecure.demo"
-            },
-            {
-              "name": "Sec-Fetch-Dest",
-              "value": "document"
-            },
-            {
               "name": "Connection",
               "value": "close"
             },
             {
-              "name": "Sec-Fetch-Mode",
-              "value": "navigate"
+              "name": "Host",
+              "value": "demo"
             },
             {
               "name": "X-Forwarded-For",
               "value": "192.168.32.1"
             },
             {
-              "name": "Upgrade-Insecure-Requests",
-              "value": "1"
-            },
-            {
-              "name": "Cookie",
-              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381109.4942%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
+              "name": "X-Forwarded-Host",
+              "value": "insecure.demo"
             },
             {
               "name": "X-Forwarded-Proto",
               "value": "https"
             },
             {
-              "name": "User-Agent",
-              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
-            },
-            {
-              "name": "Accept",
+              "name": "accept",
               "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
             },
             {
-              "name": "Host",
-              "value": "demo"
+              "name": "accept-encoding",
+              "value": "gzip, deflate, br"
+            },
+            {
+              "name": "accept-language",
+              "value": "en-GB,en-US;q=0.9,en;q=0.8"
+            },
+            {
+              "name": "cookie",
+              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381109.4942%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
+            },
+            {
+              "name": "referer",
+              "value": "https://insecure.demo/admin"
+            },
+            {
+              "name": "sec-fetch-dest",
+              "value": "document"
+            },
+            {
+              "name": "sec-fetch-mode",
+              "value": "navigate"
+            },
+            {
+              "name": "sec-fetch-site",
+              "value": "same-origin"
+            },
+            {
+              "name": "upgrade-insecure-requests",
+              "value": "1"
+            },
+            {
+              "name": "user-agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
             }
           ],
           "queryString": null,
@@ -2505,24 +2505,24 @@
               "value": "close"
             },
             {
-              "name": "Server",
-              "value": "Perl Dancer2 0.300000"
-            },
-            {
               "name": "Content-Type",
               "value": "text/html; charset=UTF-8"
             },
             {
-              "name": "X-User",
-              "value": "admin/username"
+              "name": "Date",
+              "value": "Fri, 05 Jun 2020 18:18:31 GMT"
+            },
+            {
+              "name": "Server",
+              "value": "Perl Dancer2 0.300000"
             },
             {
               "name": "Set-Cookie",
               "value": "insecure-demo=1591381111.905%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:18:31 GMT; secure; HttpOnly"
             },
             {
-              "name": "Date",
-              "value": "Fri, 05 Jun 2020 18:18:31 GMT"
+              "name": "X-User",
+              "value": "admin/username"
             }
           ],
           "cookies": [
@@ -2566,68 +2566,68 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "Sec-Fetch-Site",
-              "value": "same-origin"
-            },
-            {
-              "name": "X-Forwarded-Proto",
-              "value": "https"
-            },
-            {
-              "name": "Sec-Fetch-Mode",
-              "value": "navigate"
-            },
-            {
-              "name": "Sec-Fetch-User",
-              "value": "?1"
-            },
-            {
-              "name": "Accept-Language",
-              "value": "en-GB,en-US;q=0.9,en;q=0.8"
-            },
-            {
               "name": "Connection",
               "value": "close"
             },
             {
-              "name": "User-Agent",
-              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
-            },
-            {
-              "name": "Accept",
-              "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
-            },
-            {
-              "name": "Accept-Encoding",
-              "value": "gzip, deflate, br"
-            },
-            {
-              "name": "X-Forwarded-Host",
-              "value": "insecure.demo"
+              "name": "Host",
+              "value": "demo"
             },
             {
               "name": "X-Forwarded-For",
               "value": "192.168.32.1"
             },
             {
-              "name": "Upgrade-Insecure-Requests",
-              "value": "1"
+              "name": "X-Forwarded-Host",
+              "value": "insecure.demo"
             },
             {
-              "name": "Sec-Fetch-Dest",
-              "value": "document"
+              "name": "X-Forwarded-Proto",
+              "value": "https"
             },
             {
-              "name": "Referer",
-              "value": "https://insecure.demo/admin"
+              "name": "accept",
+              "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
             },
             {
-              "name": "Cookie",
+              "name": "accept-encoding",
+              "value": "gzip, deflate, br"
+            },
+            {
+              "name": "accept-language",
+              "value": "en-GB,en-US;q=0.9,en;q=0.8"
+            },
+            {
+              "name": "cookie",
               "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381111.905%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
             },
             {
-              "name": "Host",
-              "value": "demo"
+              "name": "referer",
+              "value": "https://insecure.demo/admin"
+            },
+            {
+              "name": "sec-fetch-dest",
+              "value": "document"
+            },
+            {
+              "name": "sec-fetch-mode",
+              "value": "navigate"
+            },
+            {
+              "name": "sec-fetch-site",
+              "value": "same-origin"
+            },
+            {
+              "name": "sec-fetch-user",
+              "value": "?1"
+            },
+            {
+              "name": "upgrade-insecure-requests",
+              "value": "1"
+            },
+            {
+              "name": "user-agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
             }
           ],
           "queryString": null,
@@ -2661,28 +2661,28 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "Date",
-              "value": "Fri, 05 Jun 2020 18:18:34 GMT"
-            },
-            {
               "name": "Connection",
               "value": "close"
-            },
-            {
-              "name": "Server",
-              "value": "Perl Dancer2 0.300000"
             },
             {
               "name": "Content-Type",
               "value": "text/html; charset=UTF-8"
             },
             {
-              "name": "X-User",
-              "value": "admin/username"
+              "name": "Date",
+              "value": "Fri, 05 Jun 2020 18:18:34 GMT"
+            },
+            {
+              "name": "Server",
+              "value": "Perl Dancer2 0.300000"
             },
             {
               "name": "Set-Cookie",
               "value": "insecure-demo=1591381114.58745%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:18:34 GMT; secure; HttpOnly"
+            },
+            {
+              "name": "X-User",
+              "value": "admin/username"
             }
           ],
           "cookies": [
@@ -2726,60 +2726,60 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "Referer",
-              "value": "https://insecure.demo/admin/fish-and-chips"
+              "name": "Connection",
+              "value": "close"
             },
             {
-              "name": "Accept-Encoding",
-              "value": "gzip, deflate, br"
-            },
-            {
-              "name": "Accept-Language",
-              "value": "en-GB,en-US;q=0.9,en;q=0.8"
-            },
-            {
-              "name": "Cookie",
-              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381114.58745%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
-            },
-            {
-              "name": "X-Forwarded-Host",
-              "value": "insecure.demo"
+              "name": "Host",
+              "value": "demo"
             },
             {
               "name": "X-Forwarded-For",
               "value": "192.168.32.1"
             },
             {
+              "name": "X-Forwarded-Host",
+              "value": "insecure.demo"
+            },
+            {
               "name": "X-Forwarded-Proto",
               "value": "https"
             },
             {
-              "name": "Accept",
+              "name": "accept",
               "value": "*/*"
             },
             {
-              "name": "Sec-Fetch-Site",
-              "value": "same-origin"
+              "name": "accept-encoding",
+              "value": "gzip, deflate, br"
             },
             {
-              "name": "Sec-Fetch-Mode",
-              "value": "no-cors"
+              "name": "accept-language",
+              "value": "en-GB,en-US;q=0.9,en;q=0.8"
             },
             {
-              "name": "Sec-Fetch-Dest",
+              "name": "cookie",
+              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381114.58745%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
+            },
+            {
+              "name": "referer",
+              "value": "https://insecure.demo/admin/fish-and-chips"
+            },
+            {
+              "name": "sec-fetch-dest",
               "value": "script"
             },
             {
-              "name": "Connection",
-              "value": "close"
+              "name": "sec-fetch-mode",
+              "value": "no-cors"
             },
             {
-              "name": "User-Agent",
+              "name": "sec-fetch-site",
+              "value": "same-origin"
+            },
+            {
+              "name": "user-agent",
               "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
-            },
-            {
-              "name": "Host",
-              "value": "demo"
             }
           ],
           "queryString": null,
@@ -2813,12 +2813,20 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "Content-Type",
-              "value": "application/javascript"
+              "name": "Connection",
+              "value": "close"
             },
             {
               "name": "Content-Length",
               "value": "1357"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/javascript"
+            },
+            {
+              "name": "Date",
+              "value": "Fri, 05 Jun 2020 18:18:34 GMT"
             },
             {
               "name": "Last-Modified",
@@ -2827,14 +2835,6 @@
             {
               "name": "Set-Cookie",
               "value": "insecure-demo=1591381114.65787%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:18:34 GMT; secure; HttpOnly"
-            },
-            {
-              "name": "Date",
-              "value": "Fri, 05 Jun 2020 18:18:34 GMT"
-            },
-            {
-              "name": "Connection",
-              "value": "close"
             }
           ],
           "cookies": [
@@ -2878,60 +2878,60 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "Sec-Fetch-Mode",
-              "value": "no-cors"
+              "name": "Connection",
+              "value": "close"
             },
             {
-              "name": "Sec-Fetch-Dest",
-              "value": "image"
-            },
-            {
-              "name": "Referer",
-              "value": "https://insecure.demo/ext/jquery-ui-1.12.1/jquery-ui.min.css"
-            },
-            {
-              "name": "Accept-Encoding",
-              "value": "gzip, deflate, br"
-            },
-            {
-              "name": "Accept-Language",
-              "value": "en-GB,en-US;q=0.9,en;q=0.8"
-            },
-            {
-              "name": "X-Forwarded-Host",
-              "value": "insecure.demo"
+              "name": "Host",
+              "value": "demo"
             },
             {
               "name": "X-Forwarded-For",
               "value": "192.168.32.1"
             },
             {
-              "name": "Connection",
-              "value": "close"
-            },
-            {
-              "name": "User-Agent",
-              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
-            },
-            {
-              "name": "Sec-Fetch-Site",
-              "value": "same-origin"
-            },
-            {
-              "name": "Cookie",
-              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381114.65787%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
+              "name": "X-Forwarded-Host",
+              "value": "insecure.demo"
             },
             {
               "name": "X-Forwarded-Proto",
               "value": "https"
             },
             {
-              "name": "Accept",
+              "name": "accept",
               "value": "image/webp,image/apng,image/*,*/*;q=0.8"
             },
             {
-              "name": "Host",
-              "value": "demo"
+              "name": "accept-encoding",
+              "value": "gzip, deflate, br"
+            },
+            {
+              "name": "accept-language",
+              "value": "en-GB,en-US;q=0.9,en;q=0.8"
+            },
+            {
+              "name": "cookie",
+              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381114.65787%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
+            },
+            {
+              "name": "referer",
+              "value": "https://insecure.demo/ext/jquery-ui-1.12.1/jquery-ui.min.css"
+            },
+            {
+              "name": "sec-fetch-dest",
+              "value": "image"
+            },
+            {
+              "name": "sec-fetch-mode",
+              "value": "no-cors"
+            },
+            {
+              "name": "sec-fetch-site",
+              "value": "same-origin"
+            },
+            {
+              "name": "user-agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
             }
           ],
           "queryString": null,
@@ -2965,12 +2965,20 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "Content-Type",
-              "value": "image/png"
+              "name": "Connection",
+              "value": "close"
             },
             {
               "name": "Content-Length",
               "value": "7006"
+            },
+            {
+              "name": "Content-Type",
+              "value": "image/png"
+            },
+            {
+              "name": "Date",
+              "value": "Fri, 05 Jun 2020 18:18:34 GMT"
             },
             {
               "name": "Last-Modified",
@@ -2979,14 +2987,6 @@
             {
               "name": "Set-Cookie",
               "value": "insecure-demo=1591381114.71451%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:18:34 GMT; secure; HttpOnly"
-            },
-            {
-              "name": "Date",
-              "value": "Fri, 05 Jun 2020 18:18:34 GMT"
-            },
-            {
-              "name": "Connection",
-              "value": "close"
             }
           ],
           "cookies": [
@@ -3031,84 +3031,84 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "X-Forwarded-For",
-              "value": "192.168.32.1"
-            },
-            {
-              "name": "Sec-Fetch-User",
-              "value": "?1"
-            },
-            {
-              "name": "Sec-Fetch-Dest",
-              "value": "document"
-            },
-            {
-              "name": "Accept-Encoding",
-              "value": "gzip, deflate, br"
-            },
-            {
-              "name": "Accept-Language",
-              "value": "en-GB,en-US;q=0.9,en;q=0.8"
-            },
-            {
               "name": "Connection",
               "value": "close"
-            },
-            {
-              "name": "Cache-Control",
-              "value": "max-age=0"
-            },
-            {
-              "name": "Accept",
-              "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
-            },
-            {
-              "name": "X-Forwarded-Proto",
-              "value": "https"
             },
             {
               "name": "Content-Length",
               "value": "30"
             },
             {
-              "name": "Upgrade-Insecure-Requests",
-              "value": "1"
+              "name": "Host",
+              "value": "demo"
             },
             {
-              "name": "Origin",
-              "value": "https://insecure.demo"
-            },
-            {
-              "name": "Content-Type",
-              "value": "application/x-www-form-urlencoded"
-            },
-            {
-              "name": "Sec-Fetch-Site",
-              "value": "same-origin"
-            },
-            {
-              "name": "Sec-Fetch-Mode",
-              "value": "navigate"
-            },
-            {
-              "name": "Cookie",
-              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381114.71451%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
+              "name": "X-Forwarded-For",
+              "value": "192.168.32.1"
             },
             {
               "name": "X-Forwarded-Host",
               "value": "insecure.demo"
             },
             {
-              "name": "User-Agent",
-              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
+              "name": "X-Forwarded-Proto",
+              "value": "https"
             },
             {
-              "name": "Referer",
+              "name": "accept",
+              "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+            },
+            {
+              "name": "accept-encoding",
+              "value": "gzip, deflate, br"
+            },
+            {
+              "name": "accept-language",
+              "value": "en-GB,en-US;q=0.9,en;q=0.8"
+            },
+            {
+              "name": "cache-control",
+              "value": "max-age=0"
+            },
+            {
+              "name": "content-type",
+              "value": "application/x-www-form-urlencoded"
+            },
+            {
+              "name": "cookie",
+              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381114.71451%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
+            },
+            {
+              "name": "origin",
+              "value": "https://insecure.demo"
+            },
+            {
+              "name": "referer",
               "value": "https://insecure.demo/admin/fish-and-chips"
             },
             {
-              "name": "Host",
-              "value": "demo"
+              "name": "sec-fetch-dest",
+              "value": "document"
+            },
+            {
+              "name": "sec-fetch-mode",
+              "value": "navigate"
+            },
+            {
+              "name": "sec-fetch-site",
+              "value": "same-origin"
+            },
+            {
+              "name": "sec-fetch-user",
+              "value": "?1"
+            },
+            {
+              "name": "upgrade-insecure-requests",
+              "value": "1"
+            },
+            {
+              "name": "user-agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
             }
           ],
           "queryString": null,
@@ -3152,16 +3152,16 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "Set-Cookie",
-              "value": "insecure-demo=1591381117.25984%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:18:37 GMT; secure; HttpOnly"
+              "name": "Connection",
+              "value": "close"
+            },
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=utf-8"
             },
             {
               "name": "Date",
               "value": "Fri, 05 Jun 2020 18:18:37 GMT"
-            },
-            {
-              "name": "Connection",
-              "value": "close"
             },
             {
               "name": "Location",
@@ -3172,8 +3172,8 @@
               "value": "Perl Dancer2 0.300000"
             },
             {
-              "name": "Content-Type",
-              "value": "text/html; charset=utf-8"
+              "name": "Set-Cookie",
+              "value": "insecure-demo=1591381117.25984%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:18:37 GMT; secure; HttpOnly"
             },
             {
               "name": "X-User",
@@ -3221,72 +3221,72 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "Sec-Fetch-Site",
-              "value": "same-origin"
-            },
-            {
-              "name": "Accept-Language",
-              "value": "en-GB,en-US;q=0.9,en;q=0.8"
-            },
-            {
-              "name": "X-Forwarded-Proto",
-              "value": "https"
-            },
-            {
-              "name": "Upgrade-Insecure-Requests",
-              "value": "1"
-            },
-            {
-              "name": "Sec-Fetch-Dest",
-              "value": "document"
-            },
-            {
-              "name": "Accept-Encoding",
-              "value": "gzip, deflate, br"
-            },
-            {
-              "name": "Cookie",
-              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381117.25984%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
-            },
-            {
-              "name": "X-Forwarded-For",
-              "value": "192.168.32.1"
-            },
-            {
-              "name": "Cache-Control",
-              "value": "max-age=0"
-            },
-            {
-              "name": "User-Agent",
-              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
-            },
-            {
-              "name": "Accept",
-              "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
-            },
-            {
-              "name": "Sec-Fetch-Mode",
-              "value": "navigate"
-            },
-            {
-              "name": "Sec-Fetch-User",
-              "value": "?1"
-            },
-            {
-              "name": "Referer",
-              "value": "https://insecure.demo/admin/fish-and-chips"
-            },
-            {
-              "name": "X-Forwarded-Host",
-              "value": "insecure.demo"
-            },
-            {
               "name": "Connection",
               "value": "close"
             },
             {
               "name": "Host",
               "value": "demo"
+            },
+            {
+              "name": "X-Forwarded-For",
+              "value": "192.168.32.1"
+            },
+            {
+              "name": "X-Forwarded-Host",
+              "value": "insecure.demo"
+            },
+            {
+              "name": "X-Forwarded-Proto",
+              "value": "https"
+            },
+            {
+              "name": "accept",
+              "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+            },
+            {
+              "name": "accept-encoding",
+              "value": "gzip, deflate, br"
+            },
+            {
+              "name": "accept-language",
+              "value": "en-GB,en-US;q=0.9,en;q=0.8"
+            },
+            {
+              "name": "cache-control",
+              "value": "max-age=0"
+            },
+            {
+              "name": "cookie",
+              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381117.25984%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
+            },
+            {
+              "name": "referer",
+              "value": "https://insecure.demo/admin/fish-and-chips"
+            },
+            {
+              "name": "sec-fetch-dest",
+              "value": "document"
+            },
+            {
+              "name": "sec-fetch-mode",
+              "value": "navigate"
+            },
+            {
+              "name": "sec-fetch-site",
+              "value": "same-origin"
+            },
+            {
+              "name": "sec-fetch-user",
+              "value": "?1"
+            },
+            {
+              "name": "upgrade-insecure-requests",
+              "value": "1"
+            },
+            {
+              "name": "user-agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
             }
           ],
           "queryString": null,
@@ -3320,28 +3320,28 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "Server",
-              "value": "Perl Dancer2 0.300000"
+              "name": "Connection",
+              "value": "close"
             },
             {
               "name": "Content-Type",
               "value": "text/html; charset=UTF-8"
             },
             {
-              "name": "X-User",
-              "value": "admin/username"
+              "name": "Date",
+              "value": "Fri, 05 Jun 2020 18:18:37 GMT"
+            },
+            {
+              "name": "Server",
+              "value": "Perl Dancer2 0.300000"
             },
             {
               "name": "Set-Cookie",
               "value": "insecure-demo=1591381117.32603%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:18:37 GMT; secure; HttpOnly"
             },
             {
-              "name": "Date",
-              "value": "Fri, 05 Jun 2020 18:18:37 GMT"
-            },
-            {
-              "name": "Connection",
-              "value": "close"
+              "name": "X-User",
+              "value": "admin/username"
             }
           ],
           "cookies": [
@@ -3385,60 +3385,60 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "Sec-Fetch-Site",
-              "value": "same-origin"
+              "name": "Connection",
+              "value": "close"
             },
             {
-              "name": "Sec-Fetch-Mode",
-              "value": "no-cors"
-            },
-            {
-              "name": "Sec-Fetch-Dest",
-              "value": "image"
-            },
-            {
-              "name": "Referer",
-              "value": "https://insecure.demo/ext/jquery-ui-1.12.1/jquery-ui.min.css"
-            },
-            {
-              "name": "Accept-Encoding",
-              "value": "gzip, deflate, br"
-            },
-            {
-              "name": "Accept-Language",
-              "value": "en-GB,en-US;q=0.9,en;q=0.8"
-            },
-            {
-              "name": "Cookie",
-              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381117.32603%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
-            },
-            {
-              "name": "X-Forwarded-Host",
-              "value": "insecure.demo"
+              "name": "Host",
+              "value": "demo"
             },
             {
               "name": "X-Forwarded-For",
               "value": "192.168.32.1"
             },
             {
+              "name": "X-Forwarded-Host",
+              "value": "insecure.demo"
+            },
+            {
               "name": "X-Forwarded-Proto",
               "value": "https"
             },
             {
-              "name": "Connection",
-              "value": "close"
-            },
-            {
-              "name": "User-Agent",
-              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
-            },
-            {
-              "name": "Accept",
+              "name": "accept",
               "value": "image/webp,image/apng,image/*,*/*;q=0.8"
             },
             {
-              "name": "Host",
-              "value": "demo"
+              "name": "accept-encoding",
+              "value": "gzip, deflate, br"
+            },
+            {
+              "name": "accept-language",
+              "value": "en-GB,en-US;q=0.9,en;q=0.8"
+            },
+            {
+              "name": "cookie",
+              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381117.32603%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
+            },
+            {
+              "name": "referer",
+              "value": "https://insecure.demo/ext/jquery-ui-1.12.1/jquery-ui.min.css"
+            },
+            {
+              "name": "sec-fetch-dest",
+              "value": "image"
+            },
+            {
+              "name": "sec-fetch-mode",
+              "value": "no-cors"
+            },
+            {
+              "name": "sec-fetch-site",
+              "value": "same-origin"
+            },
+            {
+              "name": "user-agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
             }
           ],
           "queryString": null,
@@ -3472,28 +3472,28 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "Set-Cookie",
-              "value": "insecure-demo=1591381119.27144%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:18:39 GMT; secure; HttpOnly"
-            },
-            {
-              "name": "Date",
-              "value": "Fri, 05 Jun 2020 18:18:39 GMT"
-            },
-            {
               "name": "Connection",
               "value": "close"
-            },
-            {
-              "name": "Content-Type",
-              "value": "image/png"
             },
             {
               "name": "Content-Length",
               "value": "7013"
             },
             {
+              "name": "Content-Type",
+              "value": "image/png"
+            },
+            {
+              "name": "Date",
+              "value": "Fri, 05 Jun 2020 18:18:39 GMT"
+            },
+            {
               "name": "Last-Modified",
               "value": "Thu, 04 Apr 2019 10:33:27 GMT"
+            },
+            {
+              "name": "Set-Cookie",
+              "value": "insecure-demo=1591381119.27144%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:18:39 GMT; secure; HttpOnly"
             }
           ],
           "cookies": [
@@ -3538,76 +3538,76 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
-              "name": "X-Requested-With",
-              "value": "XMLHttpRequest"
-            },
-            {
-              "name": "Content-Type",
-              "value": "application/x-www-form-urlencoded; charset=UTF-8"
-            },
-            {
-              "name": "Origin",
-              "value": "https://insecure.demo"
-            },
-            {
-              "name": "Referer",
-              "value": "https://insecure.demo/admin/fish-and-chips"
-            },
-            {
-              "name": "X-Forwarded-Proto",
-              "value": "https"
-            },
-            {
-              "name": "Accept",
-              "value": "*/*"
-            },
-            {
-              "name": "User-Agent",
-              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
-            },
-            {
-              "name": "Sec-Fetch-Site",
-              "value": "same-origin"
-            },
-            {
-              "name": "Sec-Fetch-Mode",
-              "value": "cors"
-            },
-            {
-              "name": "X-Forwarded-For",
-              "value": "192.168.32.1"
+              "name": "Connection",
+              "value": "close"
             },
             {
               "name": "Content-Length",
               "value": "43"
             },
             {
-              "name": "Sec-Fetch-Dest",
-              "value": "empty"
+              "name": "Host",
+              "value": "demo"
             },
             {
-              "name": "Cookie",
-              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381119.27144%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
+              "name": "X-Forwarded-For",
+              "value": "192.168.32.1"
             },
             {
               "name": "X-Forwarded-Host",
               "value": "insecure.demo"
             },
             {
-              "name": "Connection",
-              "value": "close"
+              "name": "X-Forwarded-Proto",
+              "value": "https"
             },
             {
-              "name": "Accept-Encoding",
+              "name": "accept",
+              "value": "*/*"
+            },
+            {
+              "name": "accept-encoding",
               "value": "gzip, deflate, br"
             },
             {
-              "name": "Accept-Language",
+              "name": "accept-language",
               "value": "en-GB,en-US;q=0.9,en;q=0.8"
             },
             {
-              "name": "Host",
-              "value": "demo"
+              "name": "content-type",
+              "value": "application/x-www-form-urlencoded; charset=UTF-8"
+            },
+            {
+              "name": "cookie",
+              "value": "user=1%3A1591409881%3Addb52a81621b6811c5584d86d52f48b4c6d3f28b531ef94df9fad9add3df525f; insecure-demo=1591381119.27144%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6"
+            },
+            {
+              "name": "origin",
+              "value": "https://insecure.demo"
+            },
+            {
+              "name": "referer",
+              "value": "https://insecure.demo/admin/fish-and-chips"
+            },
+            {
+              "name": "sec-fetch-dest",
+              "value": "empty"
+            },
+            {
+              "name": "sec-fetch-mode",
+              "value": "cors"
+            },
+            {
+              "name": "sec-fetch-site",
+              "value": "same-origin"
+            },
+            {
+              "name": "user-agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
+            },
+            {
+              "name": "x-requested-with",
+              "value": "XMLHttpRequest"
             }
           ],
           "queryString": null,
@@ -3655,24 +3655,24 @@
           "httpVersion": "HTTP/1.0",
           "headers": [
             {
+              "name": "Connection",
+              "value": "close"
+            },
+            {
               "name": "Content-Type",
               "value": "application/json"
-            },
-            {
-              "name": "X-User",
-              "value": "admin/username"
-            },
-            {
-              "name": "Set-Cookie",
-              "value": "insecure-demo=1591381125.11886%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:18:45 GMT; secure; HttpOnly"
             },
             {
               "name": "Date",
               "value": "Fri, 05 Jun 2020 18:18:45 GMT"
             },
             {
-              "name": "Connection",
-              "value": "close"
+              "name": "Set-Cookie",
+              "value": "insecure-demo=1591381125.11886%3ABQsDAAAAAQoQYTAxMmJjNDRhYjg2YmUwNwAAAA9jc3JmYmxvY2sudG9rZW4%3D%3A7129e798920645760b233abdb1ea7019ef5d12d6; path=/; expires=Sat, 06-Jun-2020 06:18:45 GMT; secure; HttpOnly"
+            },
+            {
+              "name": "X-User",
+              "value": "admin/username"
             }
           ],
           "cookies": [

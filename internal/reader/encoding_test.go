@@ -33,7 +33,7 @@ func compressed(t *testing.T, newWriter func(io.Writer) (io.WriteCloser, error))
 	return buf.Bytes()
 }
 
-// A browser saves the decoded body in a HAR, and thingnet replays it with no Content-Encoding.
+// A browser saves the decoded body in a HAR, so a tool that replays the HAR serves it with no Content-Encoding.
 func TestResponseBodyDecoded(t *testing.T) {
 	cases := []struct {
 		name, header string

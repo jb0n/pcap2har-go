@@ -32,11 +32,11 @@ func (d *FCGIInfoGatherer) ErrorInfo(errString string) {
 func (d *FCGIInfoGatherer) RequestInfo(req *http.Request) {
 	defer req.Body.Close()
 	body, _ := ioutil.ReadAll(req.Body)
-	d.h.addRequest(d.a, d.b, req, body, d.t.Seen())
+	d.h.addRequest(d.a, d.b, req, nil, body, d.t.Seen())
 }
 
 func (d *FCGIInfoGatherer) ResponseInfo(resp *http.Response, body []byte) {
-	d.h.addResponse(d.a, d.b, resp, body, len(body), d.t.Seen())
+	d.h.addResponse(d.a, d.b, resp, nil, body, len(body), d.t.Seen())
 }
 func (d *FCGIInfoGatherer) ReturnValue(int) {
 }

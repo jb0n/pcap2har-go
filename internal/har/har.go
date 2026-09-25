@@ -4,8 +4,11 @@ import (
 	"bytes"
 	"encoding/base64"
 	"fmt"
-	"io/ioutil"
+	"io"
+	"mime"
+	"mime/multipart"
 	"net/http"
+	"net/url"
 	"sort"
 	"strconv"
 	"strings"
@@ -146,7 +149,7 @@ func (h *Har) AddEntry(v reader.Conversation) {
 		if ok {
 			mimeType = mimeTypes[0]
 		}
-		headers := extractHeaders(v.Response.Header)
+		headers := extractHeaders(v.ResponseHeaders, v.Response.Header)
 		cookieInfo := extractCookies(v.Response.Cookies())
 		// A browser reports the decoded size, the bytes on the wire, and the difference as compression.
 		saved := len(v.ResponseBody) - v.ResponseWireSize
@@ -216,30 +219,89 @@ func extractCookies(cookies []*http.Cookie) []Cookie {
 	return cookieInfo
 }
 
-func extractHeaders(header http.Header) []Header {
+// extractHeaders lists the headers the way a browser HAR does: each name as sent, sorted by name (byte order),
+// and a repeated name in wire order. The http.Header map is the fallback for a message with no raw lines; it holds
+// canonical names only.
+func extractHeaders(raw []reader.RawHeader, header http.Header) []Header {
 	var headers []Header
-	for k, values := range header {
-		for _, v := range values {
-			headers = append(headers, Header{Name: k, Value: v})
+	if raw != nil {
+		for _, h := range raw {
+			headers = append(headers, Header{Name: h.Name, Value: h.Value})
+		}
+	} else {
+		for k, values := range header {
+			for _, v := range values {
+				headers = append(headers, Header{Name: k, Value: v})
+			}
 		}
 	}
+	sort.SliceStable(headers, func(i, j int) bool { return headers[i].Name < headers[j].Name })
 	return headers
 }
 
+// formParams lists the fields of a urlencoded body in body order. Request.PostForm is a map and loses it.
+func formParams(body string) []PostData {
+	var out []PostData
+	for _, kv := range queryPairs(body) {
+		out = append(out, PostData{Name: kv.Name, Value: kv.Value})
+	}
+	return out
+}
+
+// multipartParams lists the parts of a multipart body in body order. A part that does not read ends the list, the
+// way a truncated capture ends.
+func multipartParams(mimeType string, body []byte) []PostData {
+	_, mp, err := mime.ParseMediaType(mimeType)
+	if err != nil || mp["boundary"] == "" {
+		return nil
+	}
+	var out []PostData
+	r := multipart.NewReader(bytes.NewReader(body), mp["boundary"])
+	for {
+		part, err := r.NextPart()
+		if err != nil {
+			return out
+		}
+		data, err := io.ReadAll(part)
+		if err != nil {
+			return out
+		}
+		pd := PostData{Name: part.FormName(), Value: string(data), FileName: part.FileName()}
+		if pd.FileName != "" {
+			pd.ContentType = part.Header.Get("Content-Type")
+		}
+		out = append(out, pd)
+	}
+}
+
+// queryPairs lists the query parameters in the order the URL holds them. URL.Query is a map and loses it.
+func queryPairs(rawQuery string) []KeyValues {
+	var out []KeyValues
+	for _, part := range strings.Split(rawQuery, "&") {
+		if part == "" {
+			continue
+		}
+		k, v, _ := strings.Cut(part, "=")
+		if uk, err := url.QueryUnescape(k); err == nil {
+			k = uk
+		}
+		if uv, err := url.QueryUnescape(v); err == nil {
+			v = uv
+		}
+		out = append(out, KeyValues{Name: k, Value: v})
+	}
+	return out
+}
+
 func extractRequest(v reader.Conversation) RequestInfo {
-	reqheaders := extractHeaders(v.Request.Header)
-	if v.Request.Host != "" {
-		reqheaders = append(reqheaders, Header{
-			Name: "Host", Value: v.Request.Host,
-		})
+	reqheaders := extractHeaders(v.RequestHeaders, v.Request.Header)
+	// net/http moves Host out of the header map, so only the fallback path needs it back.
+	if v.RequestHeaders == nil && v.Request.Host != "" {
+		reqheaders = append(reqheaders, Header{Name: "Host", Value: v.Request.Host})
+		sort.SliceStable(reqheaders, func(i, j int) bool { return reqheaders[i].Name < reqheaders[j].Name })
 	}
 	cookieInfo := extractCookies(v.Request.Cookies())
-	var queryString []KeyValues
-	for k, values := range v.Request.URL.Query() {
-		for _, v := range values {
-			queryString = append(queryString, KeyValues{Name: k, Value: v})
-		}
-	}
+	queryString := queryPairs(v.Request.URL.RawQuery)
 	var mimeType string
 	mimeTypes, ok := v.Request.Header["Content-Type"]
 	if ok {
@@ -252,47 +314,9 @@ func extractRequest(v reader.Conversation) RequestInfo {
 	}
 	switch processedMimeType {
 	case "application/x-www-form-urlencoded":
-		v.Request.Body = ioutil.NopCloser(bytes.NewBuffer(v.RequestBody))
-		if err := v.Request.ParseForm(); err == nil {
-			for k, values := range v.Request.PostForm {
-				for _, v := range values {
-					params = append(params, PostData{Name: k, Value: v})
-				}
-			}
-		}
+		params = formParams(string(v.RequestBody))
 	case "multipart/form-data":
-		// MultipartReader
-		v.Request.Body = ioutil.NopCloser(bytes.NewBuffer(v.RequestBody))
-		err := v.Request.ParseMultipartForm(int64(len(v.RequestBody)))
-		if err == nil {
-			for k, values := range v.Request.PostForm {
-				for _, v := range values {
-					params = append(params, PostData{Name: k, Value: v})
-				}
-			}
-			for k, files := range v.Request.MultipartForm.File {
-				for _, f := range files {
-					file, err := f.Open()
-					var content []byte
-					if err == nil {
-						content, _ = ioutil.ReadAll(file)
-					}
-					v := string(content)
-					mimeTypes, ok := f.Header["Content-Type"]
-					var partType string
-					if ok {
-						partType = mimeTypes[0]
-					}
-
-					params = append(params, PostData{
-						Name:        k,
-						Value:       v,
-						FileName:    f.Filename,
-						ContentType: partType,
-					})
-				}
-			}
-		}
+		params = multipartParams(mimeType, v.RequestBody)
 	}
 	if v.Request.URL.Host == "" {
 		v.Request.URL.Host = v.Request.Host

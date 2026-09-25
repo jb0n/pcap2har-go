@@ -33,11 +33,14 @@ type ConversationAddress struct {
 	IP, Port gopacket.Flow
 }
 type Conversation struct {
-	Address      ConversationAddress
-	Request      *http.Request
-	RequestBody  []byte
-	Response     *http.Response
-	ResponseBody []byte
+	Address ConversationAddress
+	Request *http.Request
+	// RequestHeaders and ResponseHeaders keep each header name as sent, in wire order.
+	RequestHeaders  []RawHeader
+	RequestBody     []byte
+	Response        *http.Response
+	ResponseHeaders []RawHeader
+	ResponseBody    []byte
 	// ResponseWireSize is the body length before the Content-Encoding came off.
 	ResponseWireSize int
 	RequestSeen      []time.Time
@@ -124,7 +127,8 @@ func (h *HTTPConversationReaders) GetConversations() []Conversation {
 
 // ReadHTTPResponse try to read the stream as an HTTP response.
 func (h *HTTPConversationReaders) ReadHTTPResponse(spr *tcp.SavePointReader, t *tcp.TimeCaptureReader, a, b gopacket.Flow) error {
-	buf := bufio.NewReader(spr)
+	hc := &headerCapture{}
+	buf := bufio.NewReader(io.TeeReader(spr, hc))
 
 	res, err := http.ReadResponse(buf, nil)
 	if err != nil {
@@ -151,7 +155,7 @@ func (h *HTTPConversationReaders) ReadHTTPResponse(spr *tcp.SavePointReader, t *
 	if err == nil || err.Error() == "http: unexpected EOF reading trailer" {
 		body = decodeBody(res.Header.Get("Content-Encoding"), body)
 	}
-	h.addResponse(a, b, res, body, wireSize, t.Seen())
+	h.addResponse(a, b, res, hc.headers(), body, wireSize, t.Seen())
 	return err
 }
 
@@ -193,7 +197,8 @@ func (h *HTTPConversationReaders) readHTTPRequest(
 	spr *tcp.SavePointReader, t *tcp.TimeCaptureReader, a, b gopacket.Flow, isTLS bool,
 ) error {
 	spr.SavePoint()
-	buf := bufio.NewReader(spr)
+	hc := &headerCapture{}
+	buf := bufio.NewReader(io.TeeReader(spr, hc))
 
 	req, err := http.ReadRequest(buf)
 	if err != nil {
@@ -217,11 +222,13 @@ func (h *HTTPConversationReaders) readHTTPRequest(
 		}
 	}
 
-	h.addRequest(a, b, req, body, t.Seen())
+	h.addRequest(a, b, req, hc.headers(), body, t.Seen())
 	return err
 }
 
-func (h *HTTPConversationReaders) addRequest(a, b gopacket.Flow, req *http.Request, body []byte, seen []time.Time) {
+func (h *HTTPConversationReaders) addRequest(
+	a, b gopacket.Flow, req *http.Request, headers []RawHeader, body []byte, seen []time.Time,
+) {
 	address := ConversationAddress{IP: a, Port: b}
 	h.mu.Lock()
 	defer h.mu.Unlock()
@@ -230,6 +237,7 @@ func (h *HTTPConversationReaders) addRequest(a, b gopacket.Flow, req *http.Reque
 		c := conversations[n]
 		if conversations[n].Request == nil {
 			c.Request = req
+			c.RequestHeaders = headers
 			c.RequestBody = body
 			c.RequestSeen = seen
 			h.conversations[address][n] = c
@@ -237,10 +245,11 @@ func (h *HTTPConversationReaders) addRequest(a, b gopacket.Flow, req *http.Reque
 		}
 	}
 	h.conversations[address] = append(h.conversations[address], Conversation{
-		Address:     address,
-		Request:     req,
-		RequestBody: body,
-		RequestSeen: seen,
+		Address:        address,
+		Request:        req,
+		RequestHeaders: headers,
+		RequestBody:    body,
+		RequestSeen:    seen,
 	})
 }
 
@@ -251,10 +260,11 @@ func (h *HTTPConversationReaders) addErrorToResponse(a, b gopacket.Flow, errStri
 }
 
 func (h *HTTPConversationReaders) addResponse(
-	a, b gopacket.Flow, res *http.Response, body []byte, wireSize int, seen []time.Time,
+	a, b gopacket.Flow, res *http.Response, headers []RawHeader, body []byte, wireSize int, seen []time.Time,
 ) {
 	h.updateResponse(a, b, func(c *Conversation) {
 		c.Response = res
+		c.ResponseHeaders = headers
 		c.ResponseBody = body
 		c.ResponseWireSize = wireSize
 		c.ResponseSeen = seen
